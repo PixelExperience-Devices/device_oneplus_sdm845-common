@@ -32,6 +32,10 @@
 #include "PowerSessionManager.h"
 #include "disp-power/DisplayLowPower.h"
 
+#ifndef TAP_TO_WAKE_NODE
+#define TAP_TO_WAKE_NODE "/proc/touchpanel/double_tap_enable"
+#endif
+
 namespace aidl {
 namespace google {
 namespace hardware {
@@ -93,6 +97,11 @@ ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
         PowerSessionManager::getInstance()->updateHintMode(toString(type), enabled);
     }
     switch (type) {
+        case Mode::DOUBLE_TAP_TO_WAKE:
+            {
+            ::android::base::WriteStringToFile(enabled ? "1" : "0", TAP_TO_WAKE_NODE, true);
+            [[fallthrough]];
+            }
         case Mode::LOW_POWER:
             mDisplayLowPower->SetDisplayLowPower(enabled);
             if (enabled) {
@@ -141,8 +150,6 @@ ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
             if (mVRModeOn || mSustainedPerfModeOn) {
                 break;
             }
-            [[fallthrough]];
-        case Mode::DOUBLE_TAP_TO_WAKE:
             [[fallthrough]];
         case Mode::FIXED_PERFORMANCE:
             [[fallthrough]];
