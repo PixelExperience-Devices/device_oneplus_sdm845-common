@@ -74,6 +74,11 @@ on init
     # Mount cgroup mount point for cpu accounting
     mount cgroup none /acct cpuacct
 
+    # set default schedTune value for foreground/top-app
+    write /dev/stune/foreground/schedtune.prefer_idle 1
+    write /dev/stune/top-app/schedtune.boost 10
+    write /dev/stune/top-app/schedtune.prefer_idle 1
+
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
