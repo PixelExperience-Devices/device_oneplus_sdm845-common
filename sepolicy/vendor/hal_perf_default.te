@@ -1,3 +1,0 @@
-allow hal_perf_default proc_meminfo:file r_file_perms;
-allow hal_perf_default self:capability { setuid };
-allow hal_perf_default sysfs_kgsl_proc:dir { search };
