@@ -67,6 +67,10 @@ on early-init
 
 on init
 
+    # Disable UFS powersaving
+    write /sys/devices/platform/soc/1d84000.ufshc/clkgate_enable 0
+    write /sys/devices/platform/soc/1d84000.ufshc/hibern8_on_idle_enable 0
+
     # Support legacy paths
     symlink /sdcard /mnt/sdcard
     symlink /sdcard /storage/sdcard0
@@ -479,6 +483,9 @@ on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "
     #Enable UFS clock scaling back
     write /sys/bus/platform/devices/1d84000.ufshc/clkscale_enable 1
+    #Enable UFS powersaving
+    write /sys/devices/platform/soc/1d84000.ufshc/clkgate_enable 1
+    write /sys/devices/platform/soc/1d84000.ufshc/hibern8_on_idle_enable 1
     #Runtime FS tuning: we should adjust the setting upon boot_complete for runtime performance
     write /sys/block/dm-0/queue/read_ahead_kb 512
     write /sys/block/dm-1/queue/read_ahead_kb 512
@@ -860,6 +867,10 @@ service esepmdaemon /system/vendor/bin/esepmdaemon
 on charger
     setprop persist.sys.usb.config mass_storage
     start qcom-post-boot
+
+    # Enable UFS powersaving
+    write /sys/devices/platform/soc/1d84000.ufshc/clkgate_enable 1
+    write /sys/devices/platform/soc/1d84000.ufshc/hibern8_on_idle_enable 1
 
 #add poweroffhandler
 service poweroffhandler /system/vendor/bin/poweroffhandler
