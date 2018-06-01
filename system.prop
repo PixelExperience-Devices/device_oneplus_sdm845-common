@@ -17,6 +17,7 @@ persist.debug.coresight.config=stm-events
 dalvik.vm.dex2oat64.enabled=true
 
 # Display
+debug.sf.early_phase_offset_ns=5000000
 debug.sf.enable_hwc_vds=1
 
 # fastbootd
