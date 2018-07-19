@@ -50,7 +50,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # IOP
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.iop.enable_prefetch_ofr=1 \
-    vendor.iop.enable_uxe=0
+    vendor.iop.enable_uxe=1
 
 # OTG
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -63,7 +63,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.qti.core_ctl_max_cpu=4 \
-    ro.vendor.qti.core_ctl_min_cpu=2
+    ro.vendor.qti.core_ctl_min_cpu=2 \
+    vendor.perf.iop_v3.enable=1
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
