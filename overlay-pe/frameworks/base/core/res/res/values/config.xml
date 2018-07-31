@@ -128,4 +128,7 @@
 
    <!-- Allow automatic adjusting of the screen brightness while dozing in low power state. --> 
    <bool name="config_allowAutoBrightnessWhileDozing">false</bool>
+
+    <!-- Whether device has dash charging support -->
+    <bool name="config_hasDashCharger">true</bool>
 </resources>
