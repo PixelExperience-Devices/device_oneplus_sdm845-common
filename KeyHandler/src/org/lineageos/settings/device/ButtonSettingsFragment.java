@@ -27,7 +27,6 @@ import android.support.v7.preference.PreferenceGroup;
 import android.text.TextUtils;
 import android.view.MenuItem;
 
-import com.android.internal.util.aosip.FileUtils;
 import org.lineageos.settings.device.utils.Constants;
 
 public class ButtonSettingsFragment extends PreferenceFragment
