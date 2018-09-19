@@ -66,6 +66,10 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.recovery.qcom.rc
 
+# Device
+PRODUCT_PACKAGES += \
+    DeviceParts
+
 # Display
 PRODUCT_PACKAGES += \
     libvulkan
