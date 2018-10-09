@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.omnirom.camerapackage" >
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <uses-sdk
+        android:minSdkVersion="28"
+        android:targetSdkVersion="28" />
+    <application
+        android:icon="@drawable/omnirom_logo"
+        android:label="@string/advanced_settings"
+        android:supportsRtl="true" >
+        <receiver android:name="org.omnirom.camerapackage.Startup" >
+            <intent-filter android:priority="110" >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>
