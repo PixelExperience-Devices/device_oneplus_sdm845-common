@@ -17,7 +17,8 @@
 LOCAL_PATH := $(call my-dir)
 
 ifneq ($(filter enchilada fajita,$(TARGET_DEVICE)),)
-include $(call all-makefiles-under,$(LOCAL_PATH))
+subdir_makefiles=$(call first-makefiles-under,$(LOCAL_PATH))
+$(foreach mk,$(subdir_makefiles),$(info including $(mk) ...)$(eval include $(mk)))
 
 NXP_LIB := libnxpnfc_nci_jni.so
 NXP_SYMLINKS := $(addprefix $(TARGET_OUT_APPS)/NxpNfcNci/lib/arm64/,$(notdir $(NXP_LIB)))
@@ -26,7 +27,5 @@ $(NXP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@mkdir -p $(dir $@)
 	rm -rf $@
 	$(hide) ln -sf /system/lib64/$(notdir $@) $@
-
 ALL_DEFAULT_INSTALLED_MODULES += $(NXP_SYMLINKS)
-
 endif
