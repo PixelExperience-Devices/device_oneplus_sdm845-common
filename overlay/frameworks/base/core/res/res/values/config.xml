@@ -329,4 +329,11 @@
     <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
          in hardware. -->
     <bool name="config_setColorTransformAccelerated">true</bool>
+    
+    <!-- Enable dual LTE capability support-->
+    <bool name="config_dual_LTE_capability">true</bool>
+
+    <!-- Default color for notification LED is blue. --> 
+    <color name="config_defaultNotificationColor">#ff0000ff</color> 
+
 </resources>
