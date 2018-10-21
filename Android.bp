@@ -1,4 +1,3 @@
 subdirs = [
-    "lights",
-    "tri-state-key"
+    "lights"
 ]
