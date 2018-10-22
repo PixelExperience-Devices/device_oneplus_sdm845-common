@@ -61,35 +61,13 @@
             android:persistent="false" />
     </PreferenceCategory>
 
-<!--    <PreferenceCategory
-        android:title="@string/buttons_title"
-        android:key="buttons_category">
-        <SwitchPreference
-            android:key="swap_back_recents"
-            android:summary="@string/swap_back_recents_summary"
-            android:title="@string/swap_back_recents_title"
-            android:persistent="false" />
-    </PreferenceCategory>
--->
     <PreferenceCategory
         android:key="graphics"
         android:title="@string/graphics_title">
-        <!--<SwitchPreference
-            android:key="srgb"
-            android:summary="@string/srgb_mode_summary"
-            android:title="@string/srgb_mode_title" />
-        <SwitchPreference
-            android:key="dci"
-            android:summary="@string/dci_mode_summary"
-            android:title="@string/dci_mode_title" />-->
         <SwitchPreference
             android:key="hbm"
             android:summary="@string/hbm_mode_summary"
             android:title="@string/hbm_mode_title" />
-        <!--<SwitchPreference
-            android:key="night"
-            android:summary="@string/Night_mode_summary"
-            android:title="@string/Night_mode_title" />-->
         <Preference
             android:key="panel_category"
             android:title="@string/panel_category_title"

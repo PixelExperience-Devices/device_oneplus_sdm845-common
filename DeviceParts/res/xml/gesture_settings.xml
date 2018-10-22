@@ -32,15 +32,6 @@
         android:title="@string/fp_gesture_title"
         android:key="key_fp_gesture_category" >
 
-        <Preference
-            android:key="gesture_settings"
-            android:title="@string/fp_swipe_down_switch_title_head"
-            android:summary="@string/fp_swipe_down_switch_summary_head" >
-            <intent android:action="android.intent.action.MAIN"
-                    android:targetPackage="com.android.settings"
-                    android:targetClass="com.android.settings.Settings$SwipeToNotificationSuggestionActivity" />
-        </Preference>
-
         <org.omnirom.device.AppSelectListPreference
             android:key="fp_long_press_gesture_app"
             android:title="@string/category_fp_long_press_gesture"

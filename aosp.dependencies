@@ -1,0 +1,7 @@
+[
+  {
+    "repository" : "packages_resources_OppoGestures",
+    "target_path": "packages/resources/OppoGestures",
+    "remote"     : "pixel"
+  }
+]

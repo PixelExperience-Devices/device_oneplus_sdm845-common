@@ -61,7 +61,7 @@ limitations under the License
             android:layout_height="wrap_content"
             android:minHeight="?android:attr/listPreferredItemHeight"
             android:gravity="center_vertical"
-            android:text="@string/Night_mode_title"
+            android:text="@string/night_mode_title"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <RadioButton
