@@ -3,5 +3,17 @@
     "repository" : "packages_resources_OppoGestures",
     "target_path": "packages/resources/OppoGestures",
     "remote"     : "pixel"
+  },
+  {
+    "repository": "TheMuppets/proprietary_vendor_oneplus",
+    "target_path": "vendor/oneplus",
+    "branch": "lineage-16.0",
+    "remote": "github"
+  },
+  {
+    "repository": "LineageOS/android_kernel_oneplus_sdm845",
+    "target_path": "kernel/oneplus/sdm845",
+    "branch": "lineage-16.0",
+    "remote": "github"
   }
 ]
