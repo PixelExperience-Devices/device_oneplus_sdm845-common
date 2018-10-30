@@ -15,5 +15,11 @@
     "target_path": "kernel/oneplus/sdm845",
     "branch": "lineage-16.0",
     "remote": "github"
+  },
+  { 
+    "repository": "packages_apps_WallpapersBReel2018",
+    "target_path": "packages/apps/WallpapersBReel2018",
+    "branch": "pie",
+    "remote": "pixel-gitlab"
   }
 ]
