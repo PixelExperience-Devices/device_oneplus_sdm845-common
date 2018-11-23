@@ -52,6 +52,7 @@ public class PanelModeTileService extends TileService {
     public void onClick() {
         super.onClick();
         Intent panelModes = new Intent(this, PanelSettingsActivity.class);
+        panelModes.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivityAndCollapse(panelModes);
     }
 }
