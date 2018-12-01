@@ -1,2 +1,3 @@
 allow system_app sysfs_fpc_proximity:file { w_file_perms getattr };
 allow system_app sysfs_dm:file rw_file_perms;
+allow system_app sysfs_leds:file rw_file_perms;
