@@ -44,4 +44,12 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:title="@string/category_vibrator">
+        <org.lineageos.settings.device.VibratorStrengthPreference
+            android:key="vib_strength"
+            android:title="@string/vib_strength_title_head"
+            android:summary="@string/vib_strength_summary_head" />
+    </PreferenceCategory>
+
 </PreferenceScreen>
