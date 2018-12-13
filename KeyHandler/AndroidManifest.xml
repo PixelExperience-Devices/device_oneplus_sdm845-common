@@ -21,6 +21,7 @@
           android:versionCode="1"
           android:versionName="1.0" >
 
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.INJECT_EVENTS"/>
 
     <uses-sdk
@@ -49,6 +50,13 @@
         </activity>
 
         <activity android:name=".KeyHandler" />
+
+        <!-- Restore settings on startup -->
+        <receiver android:name="org.lineageos.settings.device.Startup" >
+            <intent-filter android:priority="100" >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
 
         <provider
             android:name=".ConfigPanelSearchIndexablesProvider"
