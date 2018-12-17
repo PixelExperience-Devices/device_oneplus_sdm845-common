@@ -32,10 +32,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.enable_hwc_vds=1 \
     debug.sf.latch_unsignaled=1 \
     persist.vendor.color.matrix=2 \
-    debug.sf.early_app_phase_offset_ns=500000 \
+    debug.sf.early_app_phase_offset_ns=1500000 \
     debug.sf.early_gl_phase_offset_ns=3000000 \
     debug.sf.early_gl_app_phase_offset_ns=15000000 \
-    debug.sf.early_phase_offset_ns=500000
+    debug.sf.early_phase_offset_ns=1500000
 
 # CNE
 PRODUCT_PROPERTY_OVERRIDES += \
