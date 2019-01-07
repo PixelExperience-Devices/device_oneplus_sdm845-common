@@ -55,6 +55,11 @@
             android:key="vib_call_strength"
             android:title="@string/vib_call_strength_title_head"
             android:summary="@string/vib_call_strength_summary_head" />
+
+        <org.lineageos.settings.device.VibratorNotifStrengthPreference
+            android:key="vib_notif_strength"
+            android:title="@string/vib_notif_strength_title_head"
+            android:summary="@string/vib_notif_strength_summary_head" />
     </PreferenceCategory>
 
 </PreferenceScreen>
