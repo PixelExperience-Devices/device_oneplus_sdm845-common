@@ -39,6 +39,9 @@ public class ButtonSettingsFragment extends PreferenceFragment
     public static final String KEY_CALL_VIBSTRENGTH = "vib_call_strength";
     private VibratorCallStrengthPreference mVibratorCallStrength;
 
+    public static final String KEY_NOTIF_VIBSTRENGTH = "vib_notif_strength";
+    private VibratorNotifStrengthPreference mVibratorNotifStrength;
+
     private ListPreference mTopKeyPref;
     private ListPreference mMiddleKeyPref;
     private ListPreference mBottomKeyPref;
@@ -56,6 +59,11 @@ public class ButtonSettingsFragment extends PreferenceFragment
         mVibratorCallStrength = (VibratorCallStrengthPreference) findPreference(KEY_CALL_VIBSTRENGTH);
         if (mVibratorCallStrength != null) {
             mVibratorCallStrength.setEnabled(VibratorCallStrengthPreference.isSupported());
+        }
+
+        mVibratorNotifStrength = (VibratorNotifStrengthPreference) findPreference(KEY_NOTIF_VIBSTRENGTH);
+        if (mVibratorNotifStrength != null) {
+            mVibratorNotifStrength.setEnabled(VibratorNotifStrengthPreference.isSupported());
         }
 
         mTopKeyPref = (ListPreference) findPreference(Constants.NOTIF_SLIDER_TOP_KEY);

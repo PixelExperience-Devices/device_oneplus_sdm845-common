@@ -47,6 +47,7 @@ on post-fs
     write /sys/class/leds/vibrator/vmax_override 1
     chown system system /sys/class/leds/vibrator/vmax_mv_user
     chown system system /sys/class/leds/vibrator/vmax_mv_call
+    chown system system /sys/class/leds/vibrator/vmax_mv_strong
 
 on charger
     write /sys/class/backlight/panel0-backlight/brightness 150

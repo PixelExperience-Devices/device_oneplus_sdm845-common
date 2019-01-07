@@ -34,4 +34,6 @@
     <string name="vib_strength_summary_head">Define the strength of the vibrator</string>
     <string name="vib_call_strength_title_head">Call Strength</string>
     <string name="vib_call_strength_summary_head">Define the strength of the vibrator during an incoming call</string>
+    <string name="vib_notif_strength_title_head">Notification Strength</string>
+    <string name="vib_notif_strength_summary_head">Define the strength of the vibrator during an incoming notification</string>
 </resources>
