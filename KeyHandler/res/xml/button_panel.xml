@@ -50,6 +50,11 @@
             android:key="vib_strength"
             android:title="@string/vib_strength_title_head"
             android:summary="@string/vib_strength_summary_head" />
+
+        <org.lineageos.settings.device.VibratorCallStrengthPreference
+            android:key="vib_call_strength"
+            android:title="@string/vib_call_strength_title_head"
+            android:summary="@string/vib_call_strength_summary_head" />
     </PreferenceCategory>
 
 </PreferenceScreen>
