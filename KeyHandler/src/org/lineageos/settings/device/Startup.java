@@ -26,7 +26,7 @@ public class Startup extends BroadcastReceiver {
     @Override
     public void onReceive(final Context context, final Intent bootintent) {
         VibratorStrengthPreference.restore(context);
-        VibratorCallPreference.restore(context);
-        VibratorNotifPreference.restore(context);
+        VibratorCallStrengthPreference.restore(context);
+        VibratorNotifStrengthPreference.restore(context);
     }
 }
