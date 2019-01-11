@@ -40,6 +40,7 @@ on boot
     chmod 0660 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/main_display/hbm
     chown system system /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/main_display/display_mode
     chown system system /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/main_display/hbm
+    write /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/main_display/hbm 0
 
 on post-fs
     # Vibration
