@@ -100,9 +100,10 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_PACKAGES += \
-    NfcNci \
-    Tag \
-    com.android.nfc_extras
+    android.hardware.nfc@1.1 \
+    com.android.nfc_extras \
+    libp61-jcop-kit \
+    Tag
 
 # Power
 PRODUCT_PACKAGES += \
