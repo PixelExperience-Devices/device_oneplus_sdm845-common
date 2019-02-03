@@ -78,6 +78,11 @@ lib64/vendor.qti.imsrtpservice@1.0.so
 -app/NxpSecureElement/NxpSecureElement.apk
 framework/com.nxp.nfc.jar
 etc/permissions/com.nxp.nfc.xml
+lib/android.hardware.secure_element@1.0.so
+lib/ese_spi_nxp.so
+lib/libnxpnfc-nci.so
+lib/vendor.nxp.nxpese@1.0.so
+lib/vendor.nxp.nxpnfc@1.0.so
 lib64/android.hardware.secure_element@1.0.so
 lib64/ese_spi_nxp.so
 lib64/libnxpnfc_nci_jni.so
