@@ -114,6 +114,10 @@ PRODUCT_PACKAGES += \
 # Performance
 include vendor/qcom/common/qti-vendor.mk
 
+# OPCam priv-app Whitelist
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/privapp-permissions-opcam.xml:system/etc/permissions/privapp-permissions-opcam.xml
+
 # Power
 PRODUCT_PACKAGES += \
     power.qcom:64
