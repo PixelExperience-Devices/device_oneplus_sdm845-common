@@ -20,7 +20,7 @@
     <string name="adaptive_mode_title">Adaptive mode</string>
     <string name="oneplus_mode_title">OnePlus mode</string>
     <string name="dci_mode_summary"></string>
-    <string name="dci_mode_title">DCI-P3 wide colour gammut mode</string>
+    <string name="dci_mode_title">DCI-P3 wide colour gamut mode</string>
     <string name="Night_mode_summary"></string>
     <string name="Night_mode_title">Night mode</string>
     <string name="panel_category_title">Panel modes</string>
