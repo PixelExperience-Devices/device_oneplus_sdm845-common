@@ -30,10 +30,10 @@
     <string name="notification_slider_mode_none">Нормальный</string>
     <string name="buttons_dashboard_summary">Параметры слайдера оповещений</string>
     <string name="category_vibrator">Вибрация</string>
-    <string name="vib_strength_title_head">System Strength</string>
+    <string name="vib_strength_title_head">Сила Системы</string>
     <string name="vib_strength_summary_head">Установить интенсивность вибрации</string>
-    <string name="vib_call_strength_title_head">Call Strength</string>
+    <string name="vib_call_strength_title_head">Сила Вызова</string>
     <string name="vib_call_strength_summary_head">Установите силу вибрации при входящем звонке</string>
-    <string name="vib_notif_strength_title_head">Notification Strength</string>
+    <string name="vib_notif_strength_title_head">Сила Уведомлений</string>
     <string name="vib_notif_strength_summary_head">Установите силу вибрации при входящем уведомлении</string>
 </resources>

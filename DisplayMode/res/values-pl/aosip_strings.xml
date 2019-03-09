@@ -12,7 +12,7 @@
      limitations under the License.
 -->
 <resources>
-    <string name="display_title">Display modes</string>
+    <string name="display_title">Tryby wyświetlania</string>
     <string name="display_summary">Adjust settings and preferences for display</string>
     <string name="srgb_mode_summary"></string>
     <string name="srgb_mode_title">sRGB mode</string>
