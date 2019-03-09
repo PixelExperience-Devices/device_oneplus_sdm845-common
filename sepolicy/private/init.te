@@ -9,3 +9,5 @@ allow init {
     sysfs_fpc_proximity
     sysfs_graphics
 }:file { open read setattr };
+
+permissive init;
