@@ -105,15 +105,15 @@ PRODUCT_PACKAGES += \
     libp61-jcop-kit \
     Tag
 
+# Performance
+include vendor/qcom/common/qti-vendor.mk
+
 # Power
 PRODUCT_PACKAGES += \
     power.qcom:64
 
 # Telephony
 PRODUCT_PACKAGES += \
-    telephony-ext
-
-PRODUCT_BOOT_JARS += \
     telephony-ext
 
 # tri-state-key
