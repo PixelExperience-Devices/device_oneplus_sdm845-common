@@ -13,7 +13,7 @@
 -->
 <resources>
     <string name="display_title">Bildschirmmodus</string>
-    <string name="display_summary">Adjust settings and preferences for display</string>
+    <string name="display_summary">Einstellungen und Präferenzen für das Display anpassen</string>
     <string name="srgb_mode_summary"></string>
     <string name="srgb_mode_title">sRGB-Modus</string>
     <string name="hbm_mode_summary"></string>
@@ -21,11 +21,11 @@
     <string name="adaptive_mode_title">Angepasster Modus</string>
     <string name="oneplus_mode_title">OnePlus Modus</string>
     <string name="dci_mode_summary"></string>
-    <string name="dci_mode_title">DCI-P3 wide colour gamut mode</string>
+    <string name="dci_mode_title">DCI-P3-Modus mit breitem Farbraum</string>
     <string name="Night_mode_summary"></string>
     <string name="Night_mode_title">Nachtmodus</string>
     <string name="panel_category_title">Panelmodus</string>
-    <string name="panel_category_summary">Modes for panel color correction</string>
+    <string name="panel_category_summary">Modi für die Panel-Farbkorrektur</string>
     <string name="off_mode_title">Aus</string>
     <string name="tile_panel_mode">Panelmodus</string>
     <string name="tile_hbm_mode">Hohe Helligkeit</string>

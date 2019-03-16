@@ -28,7 +28,7 @@
     <string name="notification_slider_mode_silent">Lautlos</string>
     <string name="notification_slider_mode_vibrate">Vibrieren</string>
     <string name="notification_slider_mode_none">Normal</string>
-    <string name="buttons_dashboard_summary">Alert Slider Settings</string>
+    <string name="buttons_dashboard_summary">Alert-Slider Einstellungen</string>
     <string name="category_vibrator">Vibration</string>
     <string name="vib_strength_title_head">Vibrationsstärke des Systems</string>
     <string name="vib_strength_summary_head">Stärke der Vibration einstellen</string>
