@@ -31,7 +31,7 @@
     <string name="buttons_dashboard_summary">三段式开关设置</string>
     <string name="category_vibrator">振动</string>
     <string name="vib_strength_title_head">系统强度</string>
-    <string name="vib_strength_summary_head">自定义震动强度</string>
+    <string name="vib_strength_summary_head">自定义振动强度</string>
     <string name="vib_call_strength_title_head">通话强度</string>
     <string name="vib_call_strength_summary_head">在来电期间定义振动器的强度</string>
     <string name="vib_notif_strength_title_head">通知强度</string>

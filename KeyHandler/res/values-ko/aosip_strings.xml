@@ -18,7 +18,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Notification slider -->
     <string name="notification_slider_category_title">알림 슬라이더</string>
-    <string name="notification_slider_selection_dialog_title">액션</string>
+    <string name="notification_slider_selection_dialog_title">동작</string>
     <string name="notification_slider_top_position">위쪽</string>
     <string name="notification_slider_middle_position">중간</string>
     <string name="notification_slider_bottom_position">아래쪽</string>
