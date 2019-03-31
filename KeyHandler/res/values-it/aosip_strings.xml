@@ -17,23 +17,23 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Notification slider -->
-    <string name="notification_slider_category_title">Notification slider</string>
-    <string name="notification_slider_selection_dialog_title">Action</string>
-    <string name="notification_slider_top_position">Top position</string>
-    <string name="notification_slider_middle_position">Middle position</string>
-    <string name="notification_slider_bottom_position">Bottom position</string>
-    <string name="notification_slider_mode_total_silence">Total silence</string>
-    <string name="notification_slider_mode_alarms_only">Alarms only</string>
-    <string name="notification_slider_mode_priority_only">Priority only</string>
-    <string name="notification_slider_mode_silent">Silent</string>
-    <string name="notification_slider_mode_vibrate">Vibrate</string>
-    <string name="notification_slider_mode_none">Normal</string>
-    <string name="buttons_dashboard_summary">Alert Slider Settings</string>
-    <string name="category_vibrator">Vibrator</string>
-    <string name="vib_strength_title_head">System Strength</string>
-    <string name="vib_strength_summary_head">Define the strength of the vibrator</string>
-    <string name="vib_call_strength_title_head">Call Strength</string>
-    <string name="vib_call_strength_summary_head">Define the strength of the vibrator during an incoming call</string>
-    <string name="vib_notif_strength_title_head">Notification Strength</string>
-    <string name="vib_notif_strength_summary_head">Define the strength of the vibrator during an incoming notification</string>
+    <string name="notification_slider_category_title">Slider notifiche</string>
+    <string name="notification_slider_selection_dialog_title">Azione</string>
+    <string name="notification_slider_top_position">In alto</string>
+    <string name="notification_slider_middle_position">A metà</string>
+    <string name="notification_slider_bottom_position">In fondo</string>
+    <string name="notification_slider_mode_total_silence">Nessuna interruzione</string>
+    <string name="notification_slider_mode_alarms_only">Solo sveglie</string>
+    <string name="notification_slider_mode_priority_only">Solo prioritarie</string>
+    <string name="notification_slider_mode_silent">Silenzioso</string>
+    <string name="notification_slider_mode_vibrate">Vibrazione</string>
+    <string name="notification_slider_mode_none">Normale</string>
+    <string name="buttons_dashboard_summary">Impostazioni degli avvisi dello slider</string>
+    <string name="category_vibrator">Vibrazione</string>
+    <string name="vib_strength_title_head">Intensità sistema</string>
+    <string name="vib_strength_summary_head">Imposta l\'intensità della vibrazione</string>
+    <string name="vib_call_strength_title_head">Intensità chiamata</string>
+    <string name="vib_call_strength_summary_head">Imposta l\'intensità della vibrazione alla ricezione di una chiamata</string>
+    <string name="vib_notif_strength_title_head">Intensità notifica</string>
+    <string name="vib_notif_strength_summary_head">Imposta l\'intensità della vibrazione alla ricezione di una notifica</string>
 </resources>
