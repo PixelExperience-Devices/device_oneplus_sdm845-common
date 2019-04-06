@@ -17,23 +17,23 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Notification slider -->
-    <string name="notification_slider_category_title">Notification slider</string>
-    <string name="notification_slider_selection_dialog_title">Action</string>
-    <string name="notification_slider_top_position">Top position</string>
-    <string name="notification_slider_middle_position">Middle position</string>
-    <string name="notification_slider_bottom_position">Bottom position</string>
-    <string name="notification_slider_mode_total_silence">Total silence</string>
-    <string name="notification_slider_mode_alarms_only">Alarms only</string>
-    <string name="notification_slider_mode_priority_only">Priority only</string>
-    <string name="notification_slider_mode_silent">Silent</string>
-    <string name="notification_slider_mode_vibrate">Vibrate</string>
-    <string name="notification_slider_mode_none">Normal</string>
-    <string name="buttons_dashboard_summary">Alert Slider Settings</string>
-    <string name="category_vibrator">Vibrator</string>
-    <string name="vib_strength_title_head">System Strength</string>
-    <string name="vib_strength_summary_head">Define the strength of the vibrator</string>
-    <string name="vib_call_strength_title_head">Call Strength</string>
-    <string name="vib_call_strength_summary_head">Define the strength of the vibrator during an incoming call</string>
-    <string name="vib_notif_strength_title_head">Notification Strength</string>
-    <string name="vib_notif_strength_summary_head">Define the strength of the vibrator during an incoming notification</string>
+    <string name="notification_slider_category_title">Thanh trượt độ sáng</string>
+    <string name="notification_slider_selection_dialog_title">Hành động</string>
+    <string name="notification_slider_top_position">Vị trí trên cùng</string>
+    <string name="notification_slider_middle_position">Vị trí chính giữa</string>
+    <string name="notification_slider_bottom_position">Vị trí dưới cùng</string>
+    <string name="notification_slider_mode_total_silence">Hoàn toàn tắt tiếng</string>
+    <string name="notification_slider_mode_alarms_only">Chỉ báo thức</string>
+    <string name="notification_slider_mode_priority_only">Chỉ ưu tiên</string>
+    <string name="notification_slider_mode_silent">Im lặng</string>
+    <string name="notification_slider_mode_vibrate">Rung</string>
+    <string name="notification_slider_mode_none">Bình thường</string>
+    <string name="buttons_dashboard_summary">Cài đặt Alert Slider</string>
+    <string name="category_vibrator">Rung</string>
+    <string name="vib_strength_title_head">Cường độ rung: Hệ thống</string>
+    <string name="vib_strength_summary_head">Chọn cường độ rung</string>
+    <string name="vib_call_strength_title_head">Cường độ rung: Cuộc gọi</string>
+    <string name="vib_call_strength_summary_head">Chọn cường độ rung khi có cuộc gọi đến</string>
+    <string name="vib_notif_strength_title_head">Cường độ rung: Thông báo</string>
+    <string name="vib_notif_strength_summary_head">Chọn cường độ rung khi có thông báo</string>
 </resources>
