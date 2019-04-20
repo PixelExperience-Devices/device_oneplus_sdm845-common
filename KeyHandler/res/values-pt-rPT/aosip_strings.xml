@@ -17,23 +17,23 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Notification slider -->
-    <string name="notification_slider_category_title">Notification slider</string>
-    <string name="notification_slider_selection_dialog_title">Action</string>
-    <string name="notification_slider_top_position">Top position</string>
-    <string name="notification_slider_middle_position">Middle position</string>
-    <string name="notification_slider_bottom_position">Bottom position</string>
-    <string name="notification_slider_mode_total_silence">Total silence</string>
-    <string name="notification_slider_mode_alarms_only">Alarms only</string>
-    <string name="notification_slider_mode_priority_only">Priority only</string>
-    <string name="notification_slider_mode_silent">Silent</string>
-    <string name="notification_slider_mode_vibrate">Vibrate</string>
+    <string name="notification_slider_category_title">Deslizador de notificações</string>
+    <string name="notification_slider_selection_dialog_title">Ação</string>
+    <string name="notification_slider_top_position">Posição superior</string>
+    <string name="notification_slider_middle_position">Posição média</string>
+    <string name="notification_slider_bottom_position">Posição inferior</string>
+    <string name="notification_slider_mode_total_silence">Silêncio total</string>
+    <string name="notification_slider_mode_alarms_only">Apenas alarmes</string>
+    <string name="notification_slider_mode_priority_only">Apenas prioritárias</string>
+    <string name="notification_slider_mode_silent">Silêncio</string>
+    <string name="notification_slider_mode_vibrate">Vibração</string>
     <string name="notification_slider_mode_none">Normal</string>
-    <string name="buttons_dashboard_summary">Alert Slider Settings</string>
-    <string name="category_vibrator">Vibrator</string>
+    <string name="buttons_dashboard_summary">Definições do Slider de Alerta</string>
+    <string name="category_vibrator">Vibração</string>
     <string name="vib_strength_title_head">System Strength</string>
-    <string name="vib_strength_summary_head">Define the strength of the vibrator</string>
-    <string name="vib_call_strength_title_head">Call Strength</string>
-    <string name="vib_call_strength_summary_head">Define the strength of the vibrator during an incoming call</string>
+    <string name="vib_strength_summary_head">Definir força de vibração</string>
+    <string name="vib_call_strength_title_head">Vibração de chamada</string>
+    <string name="vib_call_strength_summary_head">Definir força de vibração durante chamada</string>
     <string name="vib_notif_strength_title_head">Notification Strength</string>
-    <string name="vib_notif_strength_summary_head">Define the strength of the vibrator during an incoming notification</string>
+    <string name="vib_notif_strength_summary_head">Definir força de vibração durante notificação</string>
 </resources>

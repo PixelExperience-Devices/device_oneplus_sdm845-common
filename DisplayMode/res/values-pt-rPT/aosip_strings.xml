@@ -12,21 +12,21 @@
      limitations under the License.
 -->
 <resources>
-    <string name="display_title">Display modes</string>
-    <string name="display_summary">Adjust settings and preferences for display</string>
+    <string name="display_title">Modos de visualização</string>
+    <string name="display_summary">Ajustar definiçõese e preferências para o display</string>
     <string name="srgb_mode_summary"></string>
-    <string name="srgb_mode_title">sRGB mode</string>
+    <string name="srgb_mode_title">modo sRGB</string>
     <string name="hbm_mode_summary"></string>
-    <string name="hbm_mode_title">High brightness mode</string>
-    <string name="adaptive_mode_title">Adaptive mode</string>
-    <string name="oneplus_mode_title">OnePlus mode</string>
+    <string name="hbm_mode_title">Modo brilho máximo</string>
+    <string name="adaptive_mode_title">Modo adaptativo</string>
+    <string name="oneplus_mode_title">Modo OnePlus</string>
     <string name="dci_mode_summary"></string>
-    <string name="dci_mode_title">DCI-P3 wide colour gamut mode</string>
+    <string name="dci_mode_title">Modo de gama de cores largas DCI-P3</string>
     <string name="Night_mode_summary"></string>
-    <string name="Night_mode_title">Night mode</string>
-    <string name="panel_category_title">Panel modes</string>
-    <string name="panel_category_summary">Modes for panel color correction</string>
-    <string name="off_mode_title">Off</string>
-    <string name="tile_panel_mode">Panel modes</string>
-    <string name="tile_hbm_mode">High brightness modes</string>
+    <string name="Night_mode_title">Modo noturno</string>
+    <string name="panel_category_title">Modos de painel</string>
+    <string name="panel_category_summary">Modos para correcção de cor do painel</string>
+    <string name="off_mode_title">Desligado</string>
+    <string name="tile_panel_mode">Modos de painel</string>
+    <string name="tile_hbm_mode">Modo brilho máximo</string>
 </resources>

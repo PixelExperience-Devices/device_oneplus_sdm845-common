@@ -15,7 +15,7 @@
     <string name="display_title">Режимы отображения</string>
     <string name="display_summary">Настройки и параметры отображения</string>
     <string name="srgb_mode_summary"></string>
-    <string name="srgb_mode_title">режим sRGB</string>
+    <string name="srgb_mode_title">Режим sRGB</string>
     <string name="hbm_mode_summary"></string>
     <string name="hbm_mode_title">Режим высокой яркости</string>
     <string name="adaptive_mode_title">Адаптивный режим</string>
@@ -28,5 +28,5 @@
     <string name="panel_category_summary">Режимы для цветовой коррекции панелей</string>
     <string name="off_mode_title">Выкл</string>
     <string name="tile_panel_mode">Режим панелей</string>
-    <string name="tile_hbm_mode">Режим высокой яркости</string>
+    <string name="tile_hbm_mode">Режим повышенной яркости</string>
 </resources>

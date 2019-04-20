@@ -21,7 +21,7 @@
     <string name="adaptive_mode_title">自适应模式</string>
     <string name="oneplus_mode_title">一加模式</string>
     <string name="dci_mode_summary"></string>
-    <string name="dci_mode_title">DCI-P3 宽色域模式</string>
+    <string name="dci_mode_title">DCI-P3 广色域模式</string>
     <string name="Night_mode_summary"></string>
     <string name="Night_mode_title">夜间模式</string>
     <string name="panel_category_title">面板模式</string>
