@@ -78,9 +78,6 @@ public class VibratorCallStrengthPreference extends Preference implements
         SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(getContext()).edit();
         editor.putString(ButtonSettingsFragment.KEY_CALL_VIBSTRENGTH, newValue);
         editor.commit();
-	    if (withFeedback) {
-            mVibrator.vibrate(testVibrationPattern, -1);
-        }
 	}
 
     public static void restore(Context context) {
