@@ -124,4 +124,7 @@
 
     <!-- Whether the device supports Smart Pixels -->
     <bool name="config_enableSmartPixels">true</bool>
+
+    <!-- Whether to enable OP5/T OP cam hack -->
+    <bool name="config_hasOnePlusCamera">true</bool>
 </resources>
