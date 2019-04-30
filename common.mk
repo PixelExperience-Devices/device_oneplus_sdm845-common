@@ -73,10 +73,6 @@ PRODUCT_PACKAGES += \
     libvulkan \
     DisplayMode
 
-# Doze
-PRODUCT_PACKAGES += \
-    OnePlusDoze
-
 # HotwordEnrollement app permissions
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:system/etc/permissions/privapp-permissions-hotword.xml
