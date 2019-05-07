@@ -13,7 +13,7 @@
 -->
 <resources>
     <string name="display_title">화면 모드</string>
-    <string name="display_summary">화면 설정을 조절합니다</string>
+    <string name="display_summary">화면 설정을 조정합니다</string>
     <string name="srgb_mode_summary"></string>
     <string name="srgb_mode_title">sRGB 모드</string>
     <string name="hbm_mode_summary"></string>

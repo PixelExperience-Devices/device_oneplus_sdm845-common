@@ -28,5 +28,5 @@
     <string name="panel_category_summary">Режимы для цветовой коррекции панелей</string>
     <string name="off_mode_title">Выкл</string>
     <string name="tile_panel_mode">Режим панелей</string>
-    <string name="tile_hbm_mode">Режим повышенной яркости</string>
+    <string name="tile_hbm_mode">Режимы высокой яркости</string>
 </resources>
