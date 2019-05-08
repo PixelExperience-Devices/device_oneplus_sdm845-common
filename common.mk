@@ -70,8 +70,7 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    libvulkan \
-    DisplayMode
+    libvulkan
 
 # Doze
 PRODUCT_PACKAGES += \
