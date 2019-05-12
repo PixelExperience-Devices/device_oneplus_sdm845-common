@@ -30,10 +30,10 @@
     <string name="notification_slider_mode_none">Normal</string>
     <string name="buttons_dashboard_summary">Definições do Slider de Alerta</string>
     <string name="category_vibrator">Vibração</string>
-    <string name="vib_strength_title_head">System Strength</string>
+    <string name="vib_strength_title_head">Vibração do Sistema</string>
     <string name="vib_strength_summary_head">Definir força de vibração</string>
     <string name="vib_call_strength_title_head">Vibração de chamada</string>
     <string name="vib_call_strength_summary_head">Definir força de vibração durante chamada</string>
-    <string name="vib_notif_strength_title_head">Notification Strength</string>
+    <string name="vib_notif_strength_title_head">Vibração da Notificação</string>
     <string name="vib_notif_strength_summary_head">Definir força de vibração durante notificação</string>
 </resources>
