@@ -33,6 +33,9 @@ lib64/vendor.qti.hardware.data.latency@1.0.so
 # DASH
 -sbin/dashd;rootfs
 
+# Display postprocessing
+lib64/vendor.display.color@1.0.so
+
 # DPM
 bin/dpmd
 etc/dpm/dpm.conf
@@ -82,6 +85,9 @@ lib64/libnxpnfc-nci.so
 lib64/vendor.nxp.nxpnfc@1.0.so
 lib64/vendor.nxp.nxpese@1.0.so
 etc/nfcee_access.xml
+
+# SDM
+lib64/libsdm-disp-apis.so
 
 # Telephony
 -app/QtiTelephonyService/QtiTelephonyService.apk
