@@ -4,6 +4,20 @@ hal_server_domain(hal_livedisplay_sdm845, hal_lineage_livedisplay)
 type hal_livedisplay_sdm845_exec, exec_type, file_type;
 init_daemon_domain(hal_livedisplay_sdm845)
 
+# Allow LiveDisplay to perform binder IPC to vendor.display.color::IDisplayColor
+type hal_display_color_default, domain;
+binder_call(hal_livedisplay_sdm845, hal_display_color_default)
+
+allow hal_livedisplay_sdm845 hal_display_color_hwservice:hwservice_manager find;
+
+# Allow LiveDisplay to access pps socket
+type mm-pp-daemon, domain;
+typeattribute mm-pp-daemon socket_between_core_and_vendor_violators;
+unix_socket_connect(hal_livedisplay_sdm845, pps, mm-pp-daemon)
+
+# Allow LiveDisplay to read display props
+get_prop(hal_livedisplay_sdm845, vendor_display_prop)
+
 # Talk to the binder device node
 allow hal_livedisplay_sdm845 binder_device:chr_file rw_file_perms;
 

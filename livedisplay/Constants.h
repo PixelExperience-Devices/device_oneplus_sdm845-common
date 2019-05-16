@@ -14,11 +14,8 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "SunlightEnhancementService"
-
-#include "SunlightEnhancement.h"
-#include <android-base/logging.h>
-#include <fstream>
+#ifndef VENDOR_LINEAGE_LIVEDISPLAY_V2_0_SDM_CONSTANTS_H
+#define VENDOR_LINEAGE_LIVEDISPLAY_V2_0_SDM_CONSTANTS_H
 
 namespace vendor {
 namespace lineage {
@@ -26,30 +23,12 @@ namespace livedisplay {
 namespace V2_0 {
 namespace implementation {
 
-static constexpr const char* kHbmPath =
-    "/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/main_display/hbm";
-
-Return<bool> SunlightEnhancement::isEnabled() {
-    std::ifstream file(kHbmPath);
-    int result = -1;
-    file >> result;
-    LOG(DEBUG) << "Got result " << result << " fail " << file.fail();
-    return !file.fail() && result > 0;
-}
-
-Return<bool> SunlightEnhancement::setEnabled(bool enabled) {
-    std::ofstream file(kHbmPath);
-    file << (enabled ? "3" : "0");
-    LOG(DEBUG) << "setEnabled fail " << file.fail();
-    return !file.fail();
-}
-
-bool SunlightEnhancement::isSupported() {
-    return true;
-}
+#define PICTURE_ADJUSTMENT_FEATURE 1
 
 }  // namespace implementation
 }  // namespace V2_0
 }  // namespace livedisplay
 }  // namespace lineage
 }  // namespace vendor
+
+#endif  // VENDOR_LINEAGE_LIVEDISPLAY_V2_0_SDM_CONSTANTS_H
