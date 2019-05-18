@@ -12,8 +12,8 @@
      limitations under the License.
 -->
 <resources>
-    <string name="display_title">Режимы отображения</string>
-    <string name="display_summary">Настройки и параметры отображения</string>
+    <string name="display_title">Режимы экрана</string>
+    <string name="display_summary">Настройки и параметры экрана</string>
     <string name="srgb_mode_summary"></string>
     <string name="srgb_mode_title">Режим sRGB</string>
     <string name="hbm_mode_summary"></string>
