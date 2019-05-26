@@ -23,7 +23,6 @@
     <string name="notification_slider_middle_position">A metà</string>
     <string name="notification_slider_bottom_position">In fondo</string>
     <string name="notification_slider_mode_total_silence">Nessuna interruzione</string>
-    <string name="notification_slider_mode_alarms_only">Solo sveglie</string>
     <string name="notification_slider_mode_priority_only">Solo prioritarie</string>
     <string name="notification_slider_mode_silent">Silenzioso</string>
     <string name="notification_slider_mode_vibrate">Vibrazione</string>

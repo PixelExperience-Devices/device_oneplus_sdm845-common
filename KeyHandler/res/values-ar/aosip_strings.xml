@@ -23,7 +23,6 @@
     <string name="notification_slider_middle_position">الموضع الوسطي</string>
     <string name="notification_slider_bottom_position">الموضع السفلي</string>
     <string name="notification_slider_mode_total_silence">كتم الصوت تماماً</string>
-    <string name="notification_slider_mode_alarms_only">التنبيهات فقط</string>
     <string name="notification_slider_mode_priority_only">الأولوية فقط</string>
     <string name="notification_slider_mode_silent">صامت</string>
     <string name="notification_slider_mode_vibrate">إهتزاز</string>

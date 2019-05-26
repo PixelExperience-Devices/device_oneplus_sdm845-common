@@ -23,7 +23,6 @@
     <string name="notification_slider_middle_position">中间位置</string>
     <string name="notification_slider_bottom_position">底部位置</string>
     <string name="notification_slider_mode_total_silence">完全静音</string>
-    <string name="notification_slider_mode_alarms_only">仅限闹钟</string>
     <string name="notification_slider_mode_priority_only">仅限优先打扰</string>
     <string name="notification_slider_mode_silent">静音</string>
     <string name="notification_slider_mode_vibrate">振动</string>

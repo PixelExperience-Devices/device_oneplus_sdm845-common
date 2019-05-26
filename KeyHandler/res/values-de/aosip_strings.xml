@@ -23,7 +23,6 @@
     <string name="notification_slider_middle_position">Mittlere Position</string>
     <string name="notification_slider_bottom_position">Untere Position</string>
     <string name="notification_slider_mode_total_silence">Lautlos</string>
-    <string name="notification_slider_mode_alarms_only">Nur Wecker</string>
     <string name="notification_slider_mode_priority_only">Nur wichtige Unterbrechungen</string>
     <string name="notification_slider_mode_silent">Lautlos</string>
     <string name="notification_slider_mode_vibrate">Vibrieren</string>

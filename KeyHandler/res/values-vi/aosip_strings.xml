@@ -23,7 +23,6 @@
     <string name="notification_slider_middle_position">Vị trí chính giữa</string>
     <string name="notification_slider_bottom_position">Vị trí dưới cùng</string>
     <string name="notification_slider_mode_total_silence">Hoàn toàn tắt tiếng</string>
-    <string name="notification_slider_mode_alarms_only">Chỉ báo thức</string>
     <string name="notification_slider_mode_priority_only">Chỉ ưu tiên</string>
     <string name="notification_slider_mode_silent">Im lặng</string>
     <string name="notification_slider_mode_vibrate">Rung</string>

@@ -23,7 +23,6 @@
     <string name="notification_slider_middle_position">Pozice uprostřed</string>
     <string name="notification_slider_bottom_position">Pozice dole</string>
     <string name="notification_slider_mode_total_silence">Úplné ticho</string>
-    <string name="notification_slider_mode_alarms_only">Pouze budíky</string>
     <string name="notification_slider_mode_priority_only">Pouze prioritní</string>
     <string name="notification_slider_mode_silent">Ticho</string>
     <string name="notification_slider_mode_vibrate">Vibrace</string>
