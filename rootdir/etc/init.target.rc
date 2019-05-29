@@ -4,14 +4,19 @@ on init
 	write /dev/stune/top-app/schedtune.boost 10
 	write /dev/stune/top-app/schedtune.prefer_idle 1
 
+on post-fs
+    # Disable sched autogroup
+    write /proc/sys/kernel/sched_autogroup_enabled 0
 
 on post-fs-data
 # Tune Core_CTL for proper task placement
 	write /sys/devices/system/cpu/cpu0/core_ctl/enable 0
 	write /sys/devices/system/cpu/cpu4/core_ctl/enable 0
 
+on property:vendor.post_boot.parsed=1
+# Disable CAF task placement for Big Cores
+	write /proc/sys/kernel/sched_walt_rotate_big_tasks 0
 
-on property:sys.boot_completed=1
 # Disable sched_boost
 	write /proc/sys/kernel/sched_boost 0
 
@@ -19,24 +24,15 @@ on property:sys.boot_completed=1
 	write /dev/stune/top-app/schedtune.boost 0
 
 # Stune configuration
-	write /sys/module/cpu_boost/parameters/dynamic_stune_boost 15
+	write /sys/module/cpu_boost/parameters/dynamic_stune_boost 40
 	write /sys/module/cpu_boost/parameters/dynamic_stune_boost_ms 1500
 
 # Dynamic Stune Boost during sched_boost
-	write /dev/stune/top-app/schedtune.sched_boost 15
+	write /dev/stune/top-app/schedtune.sched_boost 40
 
-
-on property:sys.post_boot.parsed=1
-    setprop vendor.post_boot.parsed 1
-
-
-on property:vendor.post_boot.parsed=1
-# Input boost 
+# Input boost
 	write /sys/module/cpu_boost/parameters/input_boost_freq "0:1056000 1:0 2:0 3:0 4:1056000 5:0 6:0 7:0"
 	write /sys/module/cpu_boost/parameters/input_boost_ms 500
-
-# Disable CAF task placement for Big Cores
-	write /proc/sys/kernel/sched_walt_rotate_big_tasks 0
 
 # Setup Schedutil Governor
 	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor schedutil
