@@ -67,7 +67,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.recovery.qcom.rc \
-    init.prelude.rc
+    init.prelude.rc \
+    init.swap.sh
 
 # Display
 PRODUCT_PACKAGES += \
