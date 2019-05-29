@@ -14,6 +14,8 @@ on post-fs-data
 	write /sys/devices/system/cpu/cpu4/core_ctl/enable 0
 
 on property:vendor.post_boot.parsed=1
+	start enableswap
+
 # Disable CAF task placement for Big Cores
 	write /proc/sys/kernel/sched_walt_rotate_big_tasks 0
 
@@ -62,3 +64,9 @@ on property:vendor.post_boot.parsed=1
 # Adjust Read Ahead
 	write /sys/block/sda/queue/read_ahead_kb 128
 	write /sys/block/dm-0/queue/read_ahead_kb 128
+
+service enableswap /system/bin/sh /system/etc/init/init.swap.sh
+	class late_start
+	user root
+	disabled
+	oneshot
