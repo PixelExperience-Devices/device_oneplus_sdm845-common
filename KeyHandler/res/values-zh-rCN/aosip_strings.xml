@@ -27,6 +27,7 @@
     <string name="notification_slider_mode_silent">静音</string>
     <string name="notification_slider_mode_vibrate">振动</string>
     <string name="notification_slider_mode_none">正常</string>
+    <string name="notification_slider_torch">手电筒</string>
     <string name="buttons_dashboard_summary">三段式开关设置</string>
     <string name="category_vibrator">振动</string>
     <string name="vib_strength_title_head">系统强度</string>

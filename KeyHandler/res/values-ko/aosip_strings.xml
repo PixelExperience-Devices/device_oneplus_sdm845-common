@@ -27,6 +27,7 @@
     <string name="notification_slider_mode_silent">무음</string>
     <string name="notification_slider_mode_vibrate">진동</string>
     <string name="notification_slider_mode_none">기본</string>
+    <string name="notification_slider_torch">손전등</string>
     <string name="buttons_dashboard_summary">경고 슬라이더 설정</string>
     <string name="category_vibrator">진동</string>
     <string name="vib_strength_title_head">시스템 세기</string>

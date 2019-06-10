@@ -27,6 +27,7 @@
     <string name="notification_slider_mode_silent">Im lặng</string>
     <string name="notification_slider_mode_vibrate">Rung</string>
     <string name="notification_slider_mode_none">Bình thường</string>
+    <string name="notification_slider_torch">Đèn pin</string>
     <string name="buttons_dashboard_summary">Cài đặt Alert Slider</string>
     <string name="category_vibrator">Rung</string>
     <string name="vib_strength_title_head">Cường độ rung: Hệ thống</string>

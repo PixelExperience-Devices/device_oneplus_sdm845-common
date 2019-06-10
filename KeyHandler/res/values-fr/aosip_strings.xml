@@ -27,6 +27,7 @@
     <string name="notification_slider_mode_silent">Silencieux</string>
     <string name="notification_slider_mode_vibrate">Vibrer</string>
     <string name="notification_slider_mode_none">Normal</string>
+    <string name="notification_slider_torch">Lampe Torche</string>
     <string name="buttons_dashboard_summary">Paramètres du curseur des alertes</string>
     <string name="category_vibrator">Vibreur</string>
     <string name="vib_strength_title_head">Puissance système</string>

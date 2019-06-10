@@ -27,6 +27,7 @@
     <string name="notification_slider_mode_silent">Без звука</string>
     <string name="notification_slider_mode_vibrate">Вибрация</string>
     <string name="notification_slider_mode_none">Нормальный</string>
+    <string name="notification_slider_torch">Torch</string>
     <string name="buttons_dashboard_summary">Параметры слайдера уведомлений</string>
     <string name="category_vibrator">Вибрация</string>
     <string name="vib_strength_title_head">Общая</string>

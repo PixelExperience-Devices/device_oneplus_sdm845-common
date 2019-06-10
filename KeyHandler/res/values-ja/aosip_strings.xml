@@ -27,6 +27,7 @@
     <string name="notification_slider_mode_silent">サイレント</string>
     <string name="notification_slider_mode_vibrate">振動</string>
     <string name="notification_slider_mode_none">標準</string>
+    <string name="notification_slider_torch">トーチ</string>
     <string name="buttons_dashboard_summary">アラートスライダーの設定</string>
     <string name="category_vibrator">振動</string>
     <string name="vib_strength_title_head">システムの振動</string>

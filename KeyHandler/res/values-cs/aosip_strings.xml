@@ -27,6 +27,7 @@
     <string name="notification_slider_mode_silent">Ticho</string>
     <string name="notification_slider_mode_vibrate">Vibrace</string>
     <string name="notification_slider_mode_none">Normální</string>
+    <string name="notification_slider_torch">Svítilna</string>
     <string name="buttons_dashboard_summary">Nastavení posuvníku oznámení</string>
     <string name="category_vibrator">Vibrace</string>
     <string name="vib_strength_title_head">Síla systémových vibrací</string>

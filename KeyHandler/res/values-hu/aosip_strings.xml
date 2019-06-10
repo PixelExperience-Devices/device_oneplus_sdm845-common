@@ -27,6 +27,7 @@
     <string name="notification_slider_mode_silent">Néma</string>
     <string name="notification_slider_mode_vibrate">Rezgés</string>
     <string name="notification_slider_mode_none">Normál</string>
+    <string name="notification_slider_torch">Zseblámpa</string>
     <string name="buttons_dashboard_summary">Csúszka beállításai</string>
     <string name="category_vibrator">Rezgő</string>
     <string name="vib_strength_title_head">Rendszer erőssége</string>

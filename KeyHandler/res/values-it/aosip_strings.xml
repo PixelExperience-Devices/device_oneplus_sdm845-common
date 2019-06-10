@@ -27,6 +27,7 @@
     <string name="notification_slider_mode_silent">Silenzioso</string>
     <string name="notification_slider_mode_vibrate">Vibrazione</string>
     <string name="notification_slider_mode_none">Normale</string>
+    <string name="notification_slider_torch">Torcia</string>
     <string name="buttons_dashboard_summary">Impostazioni degli avvisi dello slider</string>
     <string name="category_vibrator">Vibrazione</string>
     <string name="vib_strength_title_head">Intensità sistema</string>

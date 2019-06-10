@@ -27,6 +27,7 @@
     <string name="notification_slider_mode_silent">Wyciszony</string>
     <string name="notification_slider_mode_vibrate">Wibracje</string>
     <string name="notification_slider_mode_none">Normalne</string>
+    <string name="notification_slider_torch">Latarka</string>
     <string name="buttons_dashboard_summary">Ustawienia suwaka powiadomień</string>
     <string name="category_vibrator">Wibracje</string>
     <string name="vib_strength_title_head">Siła systemu</string>

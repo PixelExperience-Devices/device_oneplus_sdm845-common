@@ -27,6 +27,7 @@
     <string name="notification_slider_mode_silent">Sessiz</string>
     <string name="notification_slider_mode_vibrate">Titreşim</string>
     <string name="notification_slider_mode_none">Normal</string>
+    <string name="notification_slider_torch">El feneri</string>
     <string name="buttons_dashboard_summary">Uyarı Kaydırıcı Ayarları</string>
     <string name="category_vibrator">Titreşim</string>
     <string name="vib_strength_title_head">Sistem Gücü</string>

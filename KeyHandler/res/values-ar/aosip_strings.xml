@@ -27,6 +27,7 @@
     <string name="notification_slider_mode_silent">صامت</string>
     <string name="notification_slider_mode_vibrate">إهتزاز</string>
     <string name="notification_slider_mode_none">الوضع العادي</string>
+    <string name="notification_slider_torch">الكشاف</string>
     <string name="buttons_dashboard_summary">إعدادات مزلاق التنبيه</string>
     <string name="category_vibrator">الهزاز</string>
     <string name="vib_strength_title_head">قوة النظام</string>
