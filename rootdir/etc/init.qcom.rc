@@ -9,9 +9,6 @@ on init
     mount none /system/etc/msm_irqbalance.conf /vendor/etc/msm_irqbalance.conf bind
 
 on boot
-    # Fingerprint
-    chown system system /sys/devices/platform/soc/soc:goodix_fp/proximity_state
-
     # Touchpanel
     chmod 0660 /proc/touchpanel/double_swipe_enable
     chmod 0660 /proc/touchpanel/down_arrow_enable
