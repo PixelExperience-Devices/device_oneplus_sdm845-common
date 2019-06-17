@@ -27,7 +27,7 @@
     <string name="notification_slider_mode_silent">Silencioso</string>
     <string name="notification_slider_mode_vibrate">Vibrar</string>
     <string name="notification_slider_mode_none">Normal</string>
-    <string name="notification_slider_torch">Torch</string>
+    <string name="notification_slider_torch">Lanterna</string>
     <string name="buttons_dashboard_summary">Configurações do controle deslizante de alerta</string>
     <string name="category_vibrator">Vibração</string>
     <string name="vib_strength_title_head">Intensidade do sistema</string>
