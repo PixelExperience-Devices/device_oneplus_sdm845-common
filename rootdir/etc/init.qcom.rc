@@ -51,6 +51,9 @@ on post-fs
     chown system system /sys/class/leds/vibrator/vmax_mv_call
     chown system system /sys/class/leds/vibrator/vmax_mv_strong
 
+    # OTG
+    write /sys/class/power_supply/usb/otg_switch 1
+
 on charger
     write /sys/class/backlight/panel0-backlight/brightness 150
 
