@@ -62,7 +62,7 @@ lib64/libdpmtcm.so
 lib64/hw/hwcomposer.sdm845.so|8e6389a1ddae937c8e5b71c5d57026a29212e5c5
 
 # IMS
--priv-app/ims/ims.apk|ae253323217a6e29155b502eda5d58d332546c5e
+-priv-app/ims/ims.apk|e33b65ab994691938696da56c4f41acd4bf832dc
 lib64/libdiag_system.so
 lib64/libimscamera_jni.so
 lib64/libimsmedia_jni.so
@@ -101,6 +101,6 @@ etc/permissions/privapp-permissions-qti.xml
 etc/sysconfig/qti_whitelist.xml
 framework/qcrilhook.jar
 framework/qcnvitems.jar
-framework/qti-telephony-common.jar|b1d392dbc9b06ac8d650b874c502da0a3fff81c7
+framework/qti-telephony-common.jar|b1953a3599255f08f1785c677d22810f65e0167b
 framework/QtiTelephonyServicelibrary.jar
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
