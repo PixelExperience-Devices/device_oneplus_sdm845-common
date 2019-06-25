@@ -73,8 +73,8 @@ lib64/lib-imsvtutils.so
 lib64/librcc.so
 lib64/vendor.qti.imsrtpservice@1.0.so
 
-# NXP NFC
--app/NxpNfcNci/NxpNfcNci.apk|698ff1fab2a6e9843310713763533ed11d39f47e
+# NFC
+-app/NxpNfcNci/NxpNfcNci.apk|5ae366475fe681ed1c7b337918763040661f0f2a
 -app/NxpSecureElement/NxpSecureElement.apk
 framework/com.nxp.nfc.jar
 etc/permissions/com.nxp.nfc.xml
