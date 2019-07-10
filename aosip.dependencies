@@ -5,6 +5,10 @@
     "branch"      : "staging"
   },
   {
+    "repository"  : "device_oneplus_common",
+    "target_path" : "device/oneplus/common"
+  },
+  {
     "repository"  : "vendor_oneplus_sdm845-common",
     "target_path" : "vendor/oneplus/sdm845-common"
   },
