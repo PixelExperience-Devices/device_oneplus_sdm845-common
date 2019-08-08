@@ -39,8 +39,10 @@ on boot
 
     chmod 0660 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/main_display/display_mode
     chmod 0660 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/main_display/hbm
+    chmod 0660 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/dimlayer_bl_en
     chown system system /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/main_display/display_mode
     chown system system /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/main_display/hbm
+    chown system system /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/dimlayer_bl_en
     write /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/main_display/hbm 0
 
 on post-fs

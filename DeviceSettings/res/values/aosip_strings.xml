@@ -21,6 +21,8 @@
     <string name="srgb_mode_title">sRGB mode</string>
     <string name="hbm_mode_summary"></string>
     <string name="hbm_mode_title">High brightness mode</string>
+    <string name="dc_mode_summary"></string>
+    <string name="dc_mode_title">DC-Dimming</string>
     <string name="adaptive_mode_title">Adaptive mode</string>
     <string name="oneplus_mode_title">OnePlus mode</string>
     <string name="dci_mode_summary"></string>

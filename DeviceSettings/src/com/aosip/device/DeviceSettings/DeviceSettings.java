@@ -47,6 +47,7 @@ public class DeviceSettings extends PreferenceFragment
 
     public static final String KEY_SRGB_SWITCH = "srgb";
     public static final String KEY_HBM_SWITCH = "hbm";
+    public static final String KEY_DC_SWITCH = "dc";
     public static final String KEY_DCI_SWITCH = "dci";
     public static final String KEY_NIGHT_SWITCH = "night";
     public static final String KEY_ADAPTIVE_SWITCH = "adaptive";
@@ -60,6 +61,7 @@ public class DeviceSettings extends PreferenceFragment
     private VibratorNotifStrengthPreference mVibratorNotifStrength;
 
     private static TwoStatePreference mHBMModeSwitch;
+    private static TwoStatePreference mDCModeSwitch;
     private ListPreference mTopKeyPref;
     private ListPreference mMiddleKeyPref;
     private ListPreference mBottomKeyPref;
@@ -93,6 +95,11 @@ public class DeviceSettings extends PreferenceFragment
         mHBMModeSwitch.setEnabled(HBMModeSwitch.isSupported());
         mHBMModeSwitch.setChecked(HBMModeSwitch.isCurrentlyEnabled(this.getContext()));
         mHBMModeSwitch.setOnPreferenceChangeListener(new HBMModeSwitch());
+
+        mDCModeSwitch = (TwoStatePreference) findPreference(KEY_DC_SWITCH);
+        mDCModeSwitch.setEnabled(DCModeSwitch.isSupported());
+        mDCModeSwitch.setChecked(DCModeSwitch.isCurrentlyEnabled(this.getContext()));
+        mDCModeSwitch.setOnPreferenceChangeListener(new DCModeSwitch());
     }
 
     @Override
