@@ -34,6 +34,7 @@
     <string name="off_mode_title">Off</string>
     <string name="tile_panel_mode">Panel modes</string>
     <string name="tile_hbm_mode">High brightness modes</string>
+    <string name="tile_dc_mode">DC-Dimming</string>
 
     <!-- Notification slider -->
     <string name="notification_slider_category_title">Notification slider</string>

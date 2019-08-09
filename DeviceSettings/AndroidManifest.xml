@@ -89,6 +89,19 @@
                     android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
         </service>
+
+        <service
+            android:name="com.aosip.device.DeviceSettings.DCModeTileService"
+            android:icon="@drawable/ic_dc_tile"
+            android:label="@string/tile_dc_mode"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+
+        <!-- Search Provider -->
         <provider
             android:name=".ConfigPanelSearchIndexablesProvider"
             android:authorities="com.aosip.device"
