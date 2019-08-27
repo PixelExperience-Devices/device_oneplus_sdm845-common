@@ -42,7 +42,6 @@ import android.view.KeyEvent;
 
 import com.android.internal.os.DeviceKeyHandler;
 import com.android.internal.util.ArrayUtils;
-import com.android.internal.util.aosip.aosipUtils;
 
 import org.lineageos.settings.device.utils.Constants;
 
@@ -54,8 +53,6 @@ public class KeyHandler implements DeviceKeyHandler {
 
     private static final SparseIntArray sSupportedSliderZenModes = new SparseIntArray();
     private static final SparseIntArray sSupportedSliderRingModes = new SparseIntArray();
-    private static final SparseIntArray sSupportedAlternativeFeatures = new SparseIntArray();
-
     static {
         sSupportedSliderZenModes.put(Constants.KEY_VALUE_TOTAL_SILENCE, Settings.Global.ZEN_MODE_NO_INTERRUPTIONS);
         sSupportedSliderZenModes.put(Constants.KEY_VALUE_SILENT, Settings.Global.ZEN_MODE_OFF);
@@ -81,7 +78,6 @@ public class KeyHandler implements DeviceKeyHandler {
     WakeLock mGestureWakeLock;
     private int mProximityTimeOut;
     private boolean mProximityWakeSupported;
-    private int currentState;
 
     public KeyHandler(Context context) {
         mContext = context;
@@ -93,7 +89,6 @@ public class KeyHandler implements DeviceKeyHandler {
                 "GestureWakeLock");
 
         mVibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
-        currentState = -1;
         if (mVibrator == null || !mVibrator.hasVibrator()) {
             mVibrator = null;
         }
@@ -117,24 +112,9 @@ public class KeyHandler implements DeviceKeyHandler {
         if (event.getAction() != KeyEvent.ACTION_UP) {
             return null;
         }
-        Log.d("KeyHandler", "Key code value: " + keyCodeValue );
-        Log.d("KeyHandler", "Current state value: " + currentState );
 
-        if (Constants.KEY_VALUE_TORCH == currentState && currentState != keyCodeValue) {
-            Log.d("KeyHandler", "un-toggling flash");
-            aosipUtils.toggleCameraFlashState(false);
-        }
-        currentState = keyCodeValue;
-
-	if(sSupportedSliderRingModes.get(keyCodeValue) != 0) {
-            Log.d("KeyHandler", "Non torch found!");
-            mAudioManager.setRingerModeInternal(sSupportedSliderRingModes.get(keyCodeValue));
-            mNotificationManager.setZenMode(sSupportedSliderZenModes.get(keyCodeValue), null, TAG);
-        } else if(Constants.KEY_VALUE_TORCH == currentState) {
-            Log.d("KeyHandler", "Toggling flash");
-	    aosipUtils.toggleCameraFlashState(true);
-        }
-
+        mAudioManager.setRingerModeInternal(sSupportedSliderRingModes.get(keyCodeValue));
+        mNotificationManager.setZenMode(sSupportedSliderZenModes.get(keyCodeValue), null, TAG);
         doHapticFeedback();
         return null;
     }

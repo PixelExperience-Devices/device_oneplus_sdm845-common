@@ -26,7 +26,6 @@
     <string name="notification_slider_mode_silent">Silent</string>
     <string name="notification_slider_mode_vibrate">Vibrate</string>
     <string name="notification_slider_mode_none">Normal</string>
-    <string name="notification_slider_torch">Torch</string>
     <string name="buttons_dashboard_summary">Alert Slider Settings</string>
 
     <string name="category_vibrator">Vibrator</string>
