@@ -23,3 +23,5 @@
 /(product|system/product)/vendor_overlay/[0-9]+/etc(/.*)?        u:object_r:vendor_configs_file:s0
 /(product|system/product)/vendor_overlay/[0-9]+/lib(64)?/hw      u:object_r:vendor_hal_file:s0
 /(product|system/product)/vendor_overlay/[0-9]+/overlay(/.*)?    u:object_r:vendor_overlay_file:s0
+
+/data/misc/aosp/client_package_name                u:object_r:aosp_data_file:s0

@@ -1,0 +1,8 @@
+# OnePlus camera
+type hal_cameraHIDL_hwservice, hwservice_manager_type;
+add_hwservice(system_server, hal_cameraHIDL_hwservice)
+allow system_server hal_cameraHIDL_hwservice:hwservice_manager { find };
+allow system_server hal_cameraHIDL_default:binder { call };
+allow system_server hal_cameraHIDL_default:hwservice_manager  { find };
+allow system_server aosp_data_file:dir search;
+allow system_server aosp_data_file:file { read open getattr };
