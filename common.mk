@@ -188,6 +188,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
+# Wi-Fi
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR_OVERLAY)/etc/wifi/WCNSS_qcom_cfg.ini
+
 # WiFi Display
 PRODUCT_PACKAGES += \
     libnl
