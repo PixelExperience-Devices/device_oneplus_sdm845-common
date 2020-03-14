@@ -77,6 +77,10 @@ persist.vendor.data.mode=concurrent
 # SSR
 persist.vendor.ssr.restart_level=ALL_ENABLE
 
+# Surfaceflinger
+ro.surface_flinger.supports_background_blur=1
+ro.sf.blurs_are_expensive=1
+
 # Vendor
 ro.vendor.qti.va_aosp.support=1
 
