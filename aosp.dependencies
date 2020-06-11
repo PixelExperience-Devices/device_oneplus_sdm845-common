@@ -6,7 +6,7 @@
     "remote"      :"github"
   },
   {
-    "repository"  :"yashsonawane/proprietary_vendor_oneplus",
+    "repository"  :"AOSiP-Devices/vendor_oneplus",
     "target_path" :"vendor/oneplus",
     "branch"      :"ten",
     "remote"      :"github"
@@ -18,7 +18,7 @@
     "remote"      :"github"
   },
   {
-    "repository"  :"Evolution-X-Devices/vendor_oneplus_camera",
+    "repository"  :"yashsonawane/vendor_oneplus_camera",
     "target_path" :"vendor/oneplus/camera",
     "branch"      :"ten",
     "remote"      :"github"
