@@ -16,6 +16,7 @@ cc_library_static {
     name: "libinit_sdm845",
     recovery_available: true,
     srcs: ["init_sdm845.cpp"],
+    whole_static_libs: ["libbase"],
     include_dirs: [
         "system/core/init",
         "system/libbase/include"
