@@ -57,9 +57,6 @@ on early-init
     chown system graphics /sys/kernel/debug/sync/sw_sync
     chmod 0666 /sys/kernel/debug/sync/sw_sync
 
-    #Disable UFS clock scaling
-    write /sys/bus/platform/devices/1d84000.ufshc/clkscale_enable 0
-
     chown root system /dev/kmsg
     chmod 0620 /dev/kmsg
     # Load WIGIG platform driver
@@ -481,8 +478,6 @@ on property:persist.vendor.sys.rawdump_copy=0
 
 on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "
-    #Enable UFS clock scaling back
-    write /sys/bus/platform/devices/1d84000.ufshc/clkscale_enable 1
     #Enable UFS powersaving
     write /sys/devices/platform/soc/1d84000.ufshc/clkgate_enable 1
     write /sys/devices/platform/soc/1d84000.ufshc/hibern8_on_idle_enable 1
