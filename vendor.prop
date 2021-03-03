@@ -163,5 +163,9 @@ persist.vendor.radio.enableadvancedscan=false
 # Sensors
 persist.vendor.sensors.firmware_property_read_support=false
 
+# SoC
+ro.soc.manufacturer=Qualcomm
+ro.soc.model=SDM845
+
 #QTI sysd
 persist.vendor.qcomsysd.enabled=1
