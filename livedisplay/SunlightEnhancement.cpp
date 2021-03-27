@@ -23,7 +23,7 @@
 namespace vendor {
 namespace lineage {
 namespace livedisplay {
-namespace V2_0 {
+namespace V2_1 {
 namespace implementation {
 
 static constexpr const char* kHbmPath =
@@ -39,13 +39,13 @@ Return<bool> SunlightEnhancement::isEnabled() {
 
 Return<bool> SunlightEnhancement::setEnabled(bool enabled) {
     std::ofstream file(kHbmPath);
-    file << (enabled ? "3" : "0");
+    file << (enabled ? "5" : "0");
     LOG(DEBUG) << "setEnabled fail " << file.fail();
     return !file.fail();
 }
 
 }  // namespace implementation
-}  // namespace V2_0
+}  // namespace V2_1
 }  // namespace livedisplay
 }  // namespace lineage
 }  // namespace vendor

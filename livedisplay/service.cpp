@@ -14,50 +14,72 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "lineage.livedisplay@2.0-service.oneplus_sdm845"
+#define LOG_TAG "lineage.livedisplay@2.1-service.oneplus_sdm845"
 
 #include <android-base/logging.h>
 #include <binder/ProcessState.h>
 #include <hidl/HidlTransportSupport.h>
 #include <livedisplay/sdm/PictureAdjustment.h>
+#include <vendor/lineage/livedisplay/2.1/IPictureAdjustment.h>
+
 #include "DisplayModes.h"
 #include "SunlightEnhancement.h"
 
-using ::vendor::lineage::livedisplay::V2_0::IDisplayModes;
-using ::vendor::lineage::livedisplay::V2_0::IPictureAdjustment;
-using ::vendor::lineage::livedisplay::V2_0::ISunlightEnhancement;
-using ::vendor::lineage::livedisplay::V2_0::implementation::DisplayModes;
-using ::vendor::lineage::livedisplay::V2_0::implementation::SunlightEnhancement;
+using android::OK;
+using android::sp;
+using android::status_t;
+using android::hardware::configureRpcThreadpool;
+using android::hardware::joinRpcThreadpool;
+
 using ::vendor::lineage::livedisplay::V2_0::sdm::PictureAdjustment;
 using ::vendor::lineage::livedisplay::V2_0::sdm::SDMController;
+using ::vendor::lineage::livedisplay::V2_1::IDisplayModes;
+using ::vendor::lineage::livedisplay::V2_1::IPictureAdjustment;
+using ::vendor::lineage::livedisplay::V2_1::ISunlightEnhancement;
+using ::vendor::lineage::livedisplay::V2_1::implementation::DisplayModes;
+using ::vendor::lineage::livedisplay::V2_1::implementation::SunlightEnhancement;
 
 int main() {
+    status_t status = OK;
+
+    android::ProcessState::initWithDriver("/dev/vndbinder");
+
+    LOG(INFO) << "LiveDisplay HAL service is starting.";
+
     std::shared_ptr<SDMController> controller = std::make_shared<SDMController>();
-    android::sp<IDisplayModes> modesService = new DisplayModes();
-    android::sp<IPictureAdjustment> paService = new PictureAdjustment(controller);
-    android::sp<ISunlightEnhancement> sreService = new SunlightEnhancement();
+    sp<DisplayModes> dm = new DisplayModes();
+    sp<PictureAdjustment> pa = new PictureAdjustment(controller);
+    sp<SunlightEnhancement> se = new SunlightEnhancement();
 
-    android::hardware::configureRpcThreadpool(2, true /*callerWillJoin*/);
+    configureRpcThreadpool(1, true /*callerWillJoin*/);
 
-    if (modesService->registerAsService() != android::OK) {
-        LOG(ERROR) << "Cannot register display modes HAL service.";
-        return 1;
+    status = dm->registerAsService();
+    if (status != OK) {
+        LOG(ERROR) << "Could not register service for LiveDisplay HAL DisplayModes Iface ("
+                   << status << ")";
+        goto shutdown;
     }
 
-    if (paService->registerAsService() != android::OK) {
-        LOG(ERROR) << "Cannot register picture adjustment HAL service.";
-        return 1;
+    status = pa->registerAsService();
+    if (status != OK) {
+        LOG(ERROR) << "Could not register service for LiveDisplay HAL PictureAdjustment Iface ("
+                   << status << ")";
+        goto shutdown;
     }
 
-    if (sreService->registerAsService() != android::OK) {
-        LOG(ERROR) << "Cannot register sunlight enhancement HAL service.";
-        return 1;
+    status = se->registerAsService();
+    if (status != OK) {
+        LOG(ERROR) << "Could not register service for LiveDisplay HAL SunlightEnhancement Iface ("
+                   << status << ")";
+        goto shutdown;
     }
 
-    LOG(INFO) << "LiveDisplay HAL service ready.";
+    LOG(INFO) << "LiveDisplay HAL service is ready.";
+    joinRpcThreadpool();
+    // Should not pass this line
 
-    android::hardware::joinRpcThreadpool();
-
-    LOG(ERROR) << "LiveDisplay HAL service failed to join thread pool.";
+shutdown:
+    // In normal operation, we don't expect the thread pool to shutdown
+    LOG(ERROR) << "LiveDisplay HAL service is shutting down.";
     return 1;
 }

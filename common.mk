@@ -148,7 +148,7 @@ PRODUCT_PACKAGES += \
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
-    lineage.livedisplay@2.0-service.oneplus_sdm845
+    lineage.livedisplay@2.1-service.oneplus_sdm845
 
 PRODUCT_PACKAGES += \
     libavservices_minijail
