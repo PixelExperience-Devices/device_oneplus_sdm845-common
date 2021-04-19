@@ -8,6 +8,7 @@ type public_adsprpcd_file, file_type;
 
 # procfs
 type proc_touchpanel, fs_type, proc_type;
+type proc_sched_boost, proc_type, fs_type;
 
 # sysfs
 type sysfs_aod, fs_type, sysfs_type;
