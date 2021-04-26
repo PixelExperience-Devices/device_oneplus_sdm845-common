@@ -7,4 +7,3 @@ allow vendor_init system_data_file:dir { ioctl open read setattr };
 set_prop(vendor_init, vendor_camera_prop)
 
 set_prop(vendor_init, system_prop)
-set_prop(vendor_init, vendor_display_prop)
