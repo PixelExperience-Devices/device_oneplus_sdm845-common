@@ -120,6 +120,9 @@ PRODUCT_PACKAGES += \
     AntHalService-Soong \
     com.dsi.ant@1.0.vendor
 
+# AOSP Recovery
+TARGET_USES_AOSP_RECOVERY := true
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
