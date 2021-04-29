@@ -91,6 +91,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
+# AOSP Recovery
+TARGET_USES_AOSP_RECOVERY := true
+
 # Camera
 PRODUCT_PACKAGES += \
     libcvface_api \
