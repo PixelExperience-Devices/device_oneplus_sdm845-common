@@ -98,7 +98,7 @@ TARGET_USES_AOSP_RECOVERY := true
 # Camera
 PRODUCT_PACKAGES += \
     libcvface_api \
-    Snap
+    GCam
 
 # Common init scripts
 PRODUCT_PACKAGES += \
