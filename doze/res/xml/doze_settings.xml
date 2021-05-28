@@ -28,14 +28,12 @@
         android:key="pickup_sensor"
         android:title="@string/pickup_sensor_title">
 
-        <ListPreference
-            android:key="gesture_pick_up_type"
-            android:defaultValue="0"
+        <SwitchPreference
+            android:key="gesture_pick_up"
+            android:defaultValue="false"
             android:icon="@drawable/ic_pickup"
             android:title="@string/pick_up_gesture_title"
-            android:summary="%s"
-            android:entries="@array/pick_up_gesture_entries"
-            android:entryValues="@array/pick_up_gesture_values" />
+            android:summary="@string/pick_up_gesture_summary" />
 
     </PreferenceCategory>
 
