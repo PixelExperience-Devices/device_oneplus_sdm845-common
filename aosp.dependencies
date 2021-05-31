@@ -8,6 +8,8 @@
     "target_path" : "kernel/oneplus/sdm845"
   },
     "repository"  : "vendor_oneplus",
-    "target_path" : "vendor/oneplus"
+    "target_path" : "vendor/oneplus/sdm845-common",
+    "branch"      : "eleven",
+    "remote"      : "pixel-devices-blobs"
   }
 ]
