@@ -20,6 +20,9 @@
 /dev/block/platform/soc/1d84000\.ufshc/by-name/reserve2                u:object_r:reserve2_block_device:s0
 /dev/block/platform/soc/1d84000\.ufshc/by-name/spunvm                  u:object_r:efs_boot_dev:s0
 
+# Block IO
+/dev/blkio(/.*)?                                                       u:object_r:blkio_file:s0
+
 # Data files
 /data/per_boot(/.*)?                                                 u:object_r:per_boot_file:s0
 
