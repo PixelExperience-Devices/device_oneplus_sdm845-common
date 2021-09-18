@@ -1,13 +1,20 @@
 [
   {
-    "repository"  : "device_oneplus_common",
-    "target_path" : "device/oneplus/common"
+    "repository"  : "LineageOS/android_device_oneplus_common",
+    "target_path" : "device/oneplus/common",
+    "branch"      : "lineage-18.1",
+    "remote"      : "github"
   },
   {
-    "repository"  : "kernel_oneplus_sdm845",
-    "target_path" : "kernel/oneplus/sdm845"
+    "repository"  : "LineageOS/android_kernel_oneplus_sdm845",
+    "target_path" : "kernel/oneplus/sdm845",
+    "branch"      : "lineage-18.1",
+    "remote"      : "github"
   },
-    "repository"  : "vendor_oneplus",
-    "target_path" : "vendor/oneplus"
+  {
+    "repository"  : "vendor_oneplus_sdm845-common",
+    "target_path" : "vendor/oneplus/sdm845-common",
+    "branch"      : "eleven",
+    "remote"      : "pixel-devices-blobs"
   }
 ]
