@@ -16,6 +16,7 @@
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+PRODUCT_COMPRESSED_APEX := false
 
 # Force disable updating of APEXes when flatten APEX flag is enabled
 ifeq ($(OVERRIDE_TARGET_FLATTEN_APEX),true)
