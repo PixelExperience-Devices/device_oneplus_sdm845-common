@@ -1,0 +1,45 @@
+.
+├── frameworks
+│   └── base
+│       ├── core
+│       │   └── res
+│       │       └── res
+│       │           ├── values
+│       │           │   └── config.xml
+│       │           └── xml
+│       │               └── power_profile.xml
+│       └── packages
+│           ├── SettingsProvider
+│           │   └── res
+│           │       └── values
+│           │           └── defaults.xml
+│           └── SystemUI
+│               └── res
+│                   ├── values
+│                   │   └── config.xml
+│                   └── values-sw372dp
+│                       └── dimens.xml
+├── overlay.txt
+└── packages
+    ├── apps
+    │   ├── Bluetooth
+    │   │   └── res
+    │   │       └── values
+    │   │           └── config.xml
+    │   ├── CarrierConfig
+    │   │   └── res
+    │   │       └── xml
+    │   │           └── vendor.xml
+    │   └── overlays
+    │       └── TelephonyResCommon
+    │           ├── AndroidManifest.xml
+    │           └── Android.mk
+    └── services
+        └── Telephony
+            └── res
+                ├── values
+                │   └── config.xml
+                └── xml
+                    └── telephony_injection.xml
+
+30 directories, 12 files

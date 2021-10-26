@@ -1,0 +1,8 @@
+libadsprpc.so
+libcdsprpc.so
+libsdsprpc.so
+libfastcvopt.so
+liblistensoundmodel2.so
+libOpenCL.so
+libprotobuf-cpp-full.so
+libprotobuf-cpp-lite.so

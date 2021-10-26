@@ -1,0 +1,176 @@
+on init
+
+    # create an uclamp group for camera-specific processes
+    write /dev/cpuctl/camera-daemon/cpu.uclamp.latency_sensitive 1
+    write /dev/cpuctl/camera-daemon/cpu.uclamp.min 0
+
+    # BPF Just In Time compiler
+    write /proc/sys/net/core/bpf_jit_enable 1
+
+    # Freezer setup
+    write /dev/freezer/frozen/freezer.killable 1
+
+    # ZRAM parameters
+    write /proc/sys/vm/page-cluster 0
+
+on late-fs
+    start vendor.power-hal-aidl
+
+on boot
+    # Touchpanel
+    chmod 0660 /proc/touchpanel/double_swipe_enable
+    chmod 0660 /proc/touchpanel/down_arrow_enable
+    chmod 0660 /proc/touchpanel/down_swipe_enable
+    chmod 0660 /proc/touchpanel/left_arrow_enable
+    chmod 0660 /proc/touchpanel/left_swipe_enable
+    chmod 0660 /proc/touchpanel/letter_m_enable
+    chmod 0660 /proc/touchpanel/letter_o_enable
+    chmod 0660 /proc/touchpanel/letter_s_enable
+    chmod 0660 /proc/touchpanel/letter_w_enable
+    chmod 0660 /proc/touchpanel/right_arrow_enabl
+    chmod 0660 /proc/touchpanel/right_swipe_enabl
+    chmod 0660 /proc/touchpanel/up_arrow_enable
+    chmod 0660 /proc/touchpanel/up_swipe_enable
+    chown system system /proc/touchpanel/double_swipe_enable
+    chown system system /proc/touchpanel/down_arrow_enable
+    chown system system /proc/touchpanel/down_swipe_enable
+    chown system system /proc/touchpanel/left_arrow_enable
+    chown system system /proc/touchpanel/left_swipe_enable
+    chown system system /proc/touchpanel/letter_m_enable
+    chown system system /proc/touchpanel/letter_o_enable
+    chown system system /proc/touchpanel/letter_s_enable
+    chown system system /proc/touchpanel/letter_w_enable
+    chown system system /proc/touchpanel/right_arrow_enabl
+    chown system system /proc/touchpanel/right_swipe_enabl
+    chown system system /proc/touchpanel/up_arrow_enable
+    chown system system /proc/touchpanel/up_swipe_enable
+
+    # Goodix proximity node
+    chmod 0660 /sys/devices/platform/soc/soc:goodix_fp/proximity_state
+    chown system system /sys/devices/platform/soc/soc:goodix_fp/proximity_state
+
+    # OTG switch
+    chown system system /sys/class/power_supply/usb/otg_switch
+    chmod 0660 /sys/class/power_supply/usb/otg_switch
+
+    mkdir /data/misc/camera 0770 cameraserver audio
+    write /data/misc/camera/client_package_name 0
+    chown cameraserver audio /data/misc/camera/client_package_name
+    chmod 0644 /data/misc/camera/client_package_name
+
+on post-fs
+    chmod 0664 /sys/devices/virtual/graphics/fb0/idle_time
+    chown system graphics /sys/devices/virtual/graphics/fb0/idle_time
+    write /sys/devices/virtual/graphics/fb0/idle_time 64
+ 
+   # Vibrator
+    chown system system /sys/class/leds/vibrator/vmax_override
+    write /sys/class/leds/vibrator/vmax_override 1
+    chown system system /sys/class/leds/vibrator/vmax_mv_user
+    chown system system /sys/class/leds/vibrator/vmax_mv_call
+    chown system system /sys/class/leds/vibrator/vmax_mv_strong
+
+on charger
+    write /sys/class/backlight/panel0-backlight/brightness 150
+
+
+on property:vendor.post_boot.parsed=1
+
+    # Enable bus-dcvs
+    write /sys/class/devfreq/soc:qcom,cpubw/governor "bw_hwmon"
+    write /sys/class/devfreq/soc:qcom,cpubw/polling_interval 50
+    write /sys/class/devfreq/soc:qcom,cpubw/min_freq 1525
+    write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/mbps_zones "2288 4577 6500 8132 9155 10681"
+    write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/sample_ms 4
+    write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/io_percent 50
+    write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/hist_memory 20
+    write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/hyst_length 10
+    write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/guard_band_mbps 0
+    write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/up_scale 250
+    write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/idle_mbps 1600
+
+    write /sys/class/devfreq/soc:qcom,llccbw/governor "bw_hwmon"
+    write /sys/class/devfreq/soc:qcom,llccbw/polling_interval 50
+    write /sys/class/devfreq/soc:qcom,llccbw/min_freq 1525
+    write /sys/class/devfreq/soc:qcom,llccbw/bw_hwmon/mbps_zones "1720 2929 3879 5931 6881"
+    write /sys/class/devfreq/soc:qcom,llccbw/bw_hwmon/sample_ms 4
+    write /sys/class/devfreq/soc:qcom,llccbw/bw_hwmon/io_percent 80
+    write /sys/class/devfreq/soc:qcom,llccbw/bw_hwmon/hist_memory 20
+    write /sys/class/devfreq/soc:qcom,llccbw/bw_hwmon/hyst_length 10
+    write /sys/class/devfreq/soc:qcom,llccbw/bw_hwmon/guard_band_mbps 0
+    write /sys/class/devfreq/soc:qcom,llccbw/bw_hwmon/up_scale 250
+    write /sys/class/devfreq/soc:qcom,llccbw/bw_hwmon/idle_mbps 1600
+
+    # Enable mem_latency governor for DDR scaling
+    write /sys/class/devfreq/soc:qcom,memlat-cpu0/governor "mem_latency"
+    write /sys/class/devfreq/soc:qcom,memlat-cpu0/polling_interval 10
+    write /sys/class/devfreq/soc:qcom,memlat-cpu0/mem_latency/ratio_ceil 400
+
+    write /sys/class/devfreq/soc:qcom,memlat-cpu4/governor "mem_latency"
+    write /sys/class/devfreq/soc:qcom,memlat-cpu4/polling_interval 10
+    write /sys/class/devfreq/soc:qcom,memlat-cpu4/mem_latency/ratio_ceil 400
+
+    # Enable mem_latency governor for L3 scaling
+    write /sys/class/devfreq/soc:qcom,l3-cpu0/governor "mem_latency"
+    write /sys/class/devfreq/soc:qcom,l3-cpu0/polling_interval 10
+    write /sys/class/devfreq/soc:qcom,l3-cpu0/mem_latency/ratio_ceil 400
+
+    write /sys/class/devfreq/soc:qcom,l3-cpu4/governor "mem_latency"
+    write /sys/class/devfreq/soc:qcom,l3-cpu4/polling_interval 10
+    write /sys/class/devfreq/soc:qcom,l3-cpu4/mem_latency/ratio_ceil 400
+
+    # Enable userspace governor for L3 cdsp nodes
+    write /sys/class/devfreq/soc:qcom,l3-cdsp/governor "userspace"
+    chown system /sys/class/devfreq/soc:qcom,l3-cdsp/userspace/set_freq
+
+    # Gold L3 ratio ceil
+    write /sys/class/devfreq/soc:qcom,l3-cpu4/mem_latency/ratio_ceil 4000
+
+    write /sys/class/devfreq/soc:qcom,mincpubw/governor "compute"
+    write /sys/class/devfreq/soc:qcom,mincpubw/polling_interval 10
+
+    # Disable sched stats
+    write /proc/sys/kernel/sched_schedstats 0
+
+    # Enable idle state listener
+    write /sys/class/drm/card0/device/idle_encoder_mask 1
+    write /sys/class/drm/card0/device/idle_timeout_ms 100
+
+    # Setup final blkio
+    # value for group_idle is us
+    write /dev/blkio/blkio.weight 1000
+    write /dev/blkio/background/blkio.weight 200
+    write /dev/blkio/blkio.group_idle 2000
+    write /dev/blkio/background/blkio.group_idle 0
+
+    # Block layer tuning: discard chunk size up to 128MB
+    # Otherwise, contiguous discards can be merged
+    write /sys/block/sda/queue/discard_max_bytes 134217728
+
+    # Back to default VM settings
+    write /proc/sys/vm/dirty_expire_centisecs 3000
+    write /proc/sys/vm/dirty_background_ratio 10
+    write /proc/sys/vm/watermark_scale_factor 1
+
+    #RT scheduler
+    write /proc/sys/kernel/sched_rt_period_us 1000000
+    write /proc/sys/kernel/sched_rt_runtime_us 1000000
+    write /proc/sys/kernel/sched_rr_timeslice_ms 1
+    write /proc/sys/kernel/sched_util_clamp_min_rt_default 0
+
+    # Setup runtime uclamp
+    write /dev/cpuctl/foreground/cpu.uclamp.latency_sensitive 1
+    write /dev/cpuctl/foreground/cpu.uclamp.min 0
+    write /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive 1
+    write /dev/cpuctl/top-app/cpu.uclamp.min 10
+
+    # Gain earpiece
+    write /sys/kernel/sound_control/earpiece_gain 18
+
+    # Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
+
+service dashd /system/bin/dashd
+    class core
+    critical
+    group root system
