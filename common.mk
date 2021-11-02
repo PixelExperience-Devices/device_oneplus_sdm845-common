@@ -202,7 +202,9 @@ PRODUCT_COPY_FILES += \
 # DebugFS
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
-# Dex to make OTA go faster
+# Dex
+PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
+
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     dalvik.vm.boot-dex2oat-cpu-set=1,2,3,4,5,6,7 \
     dalvik.vm.boot-dex2oat-threads=7 \
