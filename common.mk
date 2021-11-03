@@ -359,8 +359,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     oneplus-fwk
 
-PRODUCT_BOOT_JARS += \
-    oneplus-fwk
+#PRODUCT_BOOT_JARS += \
+#    oneplus-fwk
     
 # OnePlus Camera HIDL
 PRODUCT_PACKAGES += \
