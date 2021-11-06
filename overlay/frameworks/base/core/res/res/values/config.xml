@@ -333,6 +333,14 @@
          in hardware. -->
     <bool name="config_setColorTransformAccelerated">true</bool>
 
+    <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
+         in hardware for individual layers. -->
+    <bool name="config_setColorTransformAcceleratedPerLayer">true</bool>
+
+    <!-- Maximum color temperature, in Kelvin, supported by Night display.
+         Setting this to track the default color temperature value (currently 6500K). -->
+    <integer name="config_nightDisplayColorTemperatureMax">@integer/config_displayWhiteBalanceColorTemperatureDefault</integer>
+
     <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
          when registering authenticators with BiometricService. Format must be ID:Modality:Strength,
          where: IDs are unique per device, Modality as defined in BiometricAuthenticator.java,
