@@ -486,50 +486,6 @@ vendor/lib/hw/vulkan.adreno.so
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
 system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
-# Fingerprint
-vendor/lib/com.fingerprints.extension@1.0.so
-vendor/lib/fp_hal_extension.so
-vendor/lib/fpc_hal_common.so
-vendor/lib/fpc_hal_extension.so
-vendor/lib/fpc_tac.so
-vendor/lib/hw/fingerprint.sdm845.so
-vendor/lib/hw/goodix.fingerprint.sdm845.so
-vendor/lib/libgf_ca.so
-vendor/lib/libgf_hal.so
-vendor/lib/libgf_ud_hal.so
-vendor/lib/libgoodixfingerprintd_binder.so
-vendor/lib/libsl_fp_algo.so
-vendor/lib/libsl_fp_impl.so
-vendor/lib/libsl_fp_impl_util.so
-vendor/lib/libsl_fp_nosec.so
-vendor/lib/libsl_fp_prepro.so
-vendor/lib/vendor.goodix.hardware.biometrics.fingerprint@2.1.so
-vendor/lib64/com.fingerprints.extension@1.0.so
-vendor/lib64/fp_hal_extension.so
-vendor/lib64/fpc_hal_common.so
-vendor/lib64/fpc_hal_extension.so
-vendor/lib64/fpc_tac.so
-vendor/lib64/hw/fingerprint.sdm845.so
-vendor/lib64/hw/goodix.fingerprint.sdm845.so
-vendor/lib64/libgf_ca.so
-vendor/lib64/libgf_hal.so
-vendor/lib64/libgf_ud_hal.so
-vendor/lib64/libgoodixfingerprintd_binder.so
-vendor/lib64/libsl_fp_algo.so
-vendor/lib64/libsl_fp_impl.so
-vendor/lib64/libsl_fp_impl_util.so
-vendor/lib64/libsl_fp_nosec.so
-vendor/lib64/libsl_fp_prepro.so
-vendor/lib64/vendor.goodix.hardware.biometrics.fingerprint@2.1.so
-
-# QFingerprint
--vendor/app/QFingerprintService/QFingerprintService.apk
-vendor/bin/qfp-daemon
-vendor/etc/permissions/qti_fingerprint_interface.xml
-vendor/lib/vendor.qti.hardware.fingerprint@1.0.so
-vendor/lib64/libqfp-service.so
-vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
-
 # GPS certificates
 vendor/etc/xtra_root_cert.pem
 vendor/etc/cacert_location.pem
@@ -1165,9 +1121,6 @@ vendor/bin/thermal-engine
 vendor/etc/thermal-engine.conf
 vendor/lib64/libthermalclient.so
 vendor/lib/libthermalclient.so
-
-# Touchscreen
-vendor/etc/firmware/tp/fw_synaptics_18801.img
 
 # Trusted Execution Environment connector
 vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service
