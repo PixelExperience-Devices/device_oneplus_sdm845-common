@@ -304,10 +304,6 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1 \
     android.hardware.keymaster@4.1.vendor
 
-# LiveDisplay
-#PRODUCT_PACKAGES += \
-#    lineage.livedisplay@2.0-service.oneplus_sdm845
-
 PRODUCT_PACKAGES += \
     libavservices_minijail
     
@@ -529,10 +525,6 @@ PRODUCT_PACKAGES += \
 # tri-state-key
 PRODUCT_PACKAGES += \
     KeyHandler
-
-# Trust HAL
-PRODUCT_PACKAGES += \
-    lineage.trust@1.0-service
 
 # Update engine
 PRODUCT_PACKAGES += \
