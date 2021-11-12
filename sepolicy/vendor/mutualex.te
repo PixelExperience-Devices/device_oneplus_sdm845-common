@@ -1,0 +1,28 @@
+type vendor_mutualex, domain;
+type vendor_mutualex_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(vendor_mutualex)
+
+allow vendor_mutualex vendor_mutualex:{
+    qipcrtr_socket
+    netlink_generic_socket
+    socket
+}create_socket_perms_no_ioctl;
+
+hal_client_domain(vendor_mutualex,hal_wifi_hostapd)
+hal_client_domain(vendor_mutualex,hal_wifi_supplicant)
+
+# allow mutualex to access wpa_socket
+allow vendor_mutualex wifi_vendor_data_file:dir r_dir_perms;
+allow vendor_mutualex wifi_vendor_wpa_socket:sock_file write;
+
+#communicating with wpa supplicant for sending commands/listening to events
+unix_socket_send(vendor_mutualex, wpa, hal_wifi_supplicant)
+allow vendor_mutualex wpa_data_file:dir w_dir_perms;
+allow vendor_mutualex wpa_data_file:sock_file create_file_perms;
+
+#communicating with hostapd for sending commands/listening to events
+allow vendor_mutualex hostapd_data_file:dir rw_dir_perms;
+allow vendor_mutualex hostapd_data_file:sock_file create_file_perms;
+allow vendor_mutualex { hal_wifi_hostapd_default }:unix_dgram_socket sendto;
+
+wakelock_use(vendor_mutualex)

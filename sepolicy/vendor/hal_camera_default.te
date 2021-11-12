@@ -1,0 +1,36 @@
+# Binder calls to hal_cameraHIDL
+binder_call(hal_camera_default, hal_cameraHIDL)
+
+# Allow hal_camera_default to find hal_cameraHIDL_hwservice
+allow hal_camera_default hal_cameraHIDL_hwservice:hwservice_manager find;
+
+allow hal_camera_default default_android_hwservice:hwservice_manager find;
+allow hal_camera_default default_android_vndservice:service_manager find;
+allow hal_camera_default hal_configstore_ISurfaceFlingerConfigs:hwservice_manager find;
+allow hal_camera_default mnt_vendor_file:dir { add_name write };
+allow hal_camera_default mnt_vendor_file:file { create getattr open read write };
+
+# Persist files
+allow hal_camera_default persist_camera_file:dir w_dir_perms;
+allow hal_camera_default persist_camera_file:file create_file_perms;
+
+allow hal_camera_default vendor_camera_data_file:dir rw_dir_perms;
+allow hal_camera_default vendor_camera_data_file:file create_file_perms;
+allow hal_camera_default vendor_camera_data_file:file rw_file_perms;
+
+allow hal_camera_default nfc_data_file:dir r_dir_perms;
+allow hal_camera_default sysfs_net:dir r_dir_perms;
+allow hal_camera_default sysfs_net:file r_file_perms;
+allow hal_camera_default vendor_file:file {execute execute_no_trans};
+
+
+# Properties
+set_prop(hal_camera_default, vendor_camera_prop)
+
+allow hal_camera_default input_device:dir r_dir_perms;
+allow hal_camera_default input_device:chr_file r_file_perms;
+allow hal_camera_default xdsp_device:chr_file r_file_perms;
+allow hal_camera_default qdsp_device:chr_file r_file_perms;
+allow hal_camera_default public_adsprpcd_file:file r_file_perms;
+
+allow hal_camera_default vendor_shell_exec:file { execute execute_no_trans };

@@ -1,0 +1,13 @@
+# Allow qti_init_shell to write to sysfs_fsc
+#allow qti_init_shell sysfs_fsc:file w_file_perms;
+
+# Allow qti_init_shell to write to sysfs_scsi_host
+allow qti_init_shell sysfs_scsi_host:file w_file_perms;
+
+allow qti_init_shell configfs:dir rw_dir_perms;
+allow qti_init_shell configfs:file create;
+allow qti_init_shell configfs:file rw_file_perms;
+allow qti_init_shell default_prop:file r_file_perms;
+allow qti_init_shell self:capability dac_override;
+allow qti_init_shell kmsg_device:chr_file rw_file_perms;
+allow qti_init_shell sensors_vendor_data_file:dir { search open };

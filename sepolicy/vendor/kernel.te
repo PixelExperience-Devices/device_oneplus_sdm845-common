@@ -1,0 +1,11 @@
+allow kernel self:system syslog_read;
+
+# Allow kernel to read kmsg_device
+allow kernel kmsg_device:chr_file r_file_perms;
+
+# Allow kernel to search in block_device and in debugfs
+allow kernel block_device:dir search;
+allow kernel debugfs_wlan:dir search;
+allow kernel self:socket create;
+
+allow kernel param_block_device:blk_file rw_file_perms;

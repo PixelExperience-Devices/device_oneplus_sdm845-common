@@ -1,0 +1,1 @@
+allow hal_atrace_default debugfs_tracing_debug:file w_file_perms;

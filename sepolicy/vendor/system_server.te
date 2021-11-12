@@ -1,0 +1,13 @@
+allow system_server sysfs_fpc_proximity:file rw_file_perms;
+
+# OTA updater
+allow system_server sdcardfs:file rw_file_perms;
+
+allow system_server default_android_hwservice:hwservice_manager find;
+allow system_server hal_cameraHIDL_hwservice:hwservice_manager find;
+binder_call(system_server, init);
+binder_call(system_server, hal_cameraHIDL_default);
+allow system_server camera_data_file:file r_file_perms;
+allow system_server camera_data_file:dir r_dir_perms;
+allow system_server app_zygote:process getpgid;
+get_prop(system_server, vendor_camera_prop)

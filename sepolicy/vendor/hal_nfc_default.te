@@ -1,0 +1,14 @@
+# Allow hal_nfc_default to read and write to proc_touchpanel
+allow hal_nfc_default proc_touchpanel:dir search;
+allow hal_nfc_default proc_touchpanel:file rw_file_perms;
+
+allow hal_nfc_default device:chr_file rw_file_perms;
+allow hal_nfc_default hal_secure_element_hwservice:hwservice_manager find;
+
+binder_call(hal_nfc_default, hal_secure_element_default);
+
+allow hal_nfc_default default_prop:file r_file_perms;
+allow hal_nfc_default device:chr_file rw_file_perms;
+allow hal_nfc_default nfc_vendor_data_file:dir search;
+get_prop(hal_nfc_default, vendor_nfc_prop);
+

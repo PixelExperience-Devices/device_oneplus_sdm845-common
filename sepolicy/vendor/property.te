@@ -1,0 +1,10 @@
+type vendor_camera_prop, property_type;
+type vendor_power_prop, property_type;
+type vendor_nfc_prop, property_type;
+type vendor_sensors_prop, property_type;
+type thermal_engine_prop, property_type;
+type data_qmipriod_prop, property_type;
+type sensors_dbg_prop, property_type;
+
+# Dolby
+type vendor_dolby_loglevel_prop, property_type;

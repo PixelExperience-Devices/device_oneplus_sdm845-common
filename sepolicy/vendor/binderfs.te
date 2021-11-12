@@ -1,0 +1,4 @@
+# REVERT ME: make binderfs permissive
+userdebug_or_eng(`
+  permissive binderfs;
+')

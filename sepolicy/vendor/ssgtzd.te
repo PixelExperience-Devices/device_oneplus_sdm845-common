@@ -1,0 +1,1 @@
+allow ssgtzd device:chr_file rw_file_perms;

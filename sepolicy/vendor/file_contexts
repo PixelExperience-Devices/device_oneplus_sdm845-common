@@ -1,0 +1,72 @@
+# Data files
+/data/display(/.*)?      u:object_r:display_data_file:s0
+/data/fpc_images(/.*)?            u:object_r:fpc_images_file:s0
+/data/vendor/oemnvitems/4678_0    u:object_r:wifi_nv_data_file:s0
+/data/vendor/oemnvitems/4678_1    u:object_r:wifi_nv_data_file:s0
+
+
+# Devices
+/dev/block/platform/soc/1d84000\.ufshc/by-name/config         u:object_r:frp_block_device:s0
+/dev/block/platform/soc/1d84000\.ufshc/by-name/oem_dycnvbk    u:object_r:oem_block_device:s0
+/dev/block/platform/soc/1d84000\.ufshc/by-name/oem_stanvbk    u:object_r:oem_block_device:s0
+/dev/block/platform/soc/1d84000\.ufshc/by-name/param          u:object_r:param_block_device:s0
+
+# Devices
+/dev/dash         u:object_r:dash_device:s0
+/dev/goodix_fp    u:object_r:fingerprintd_device:s0
+/dev/p73          u:object_r:nfc_device:s0
+/dev/pn553        u:object_r:nfc_device:s0
+
+# DC dimming
+/sys/devices/platform/soc/ae00000\.qcom\,mdss_mdp/drm/card0/card0-DSI-1/dimlayer_bl_en           u:object_r:sysfs_dm:s0
+
+# Files in rootfs
+/bt_firmware(/.*)?       u:object_r:bt_firmware_file:s0
+/firmware(/.*)?          u:object_r:firmware_file:s0
+/persist(/.*)?           u:object_r:mnt_vendor_file:s0
+
+# Files in sysfs
+/sys/devices/platform/soc/soc:goodix_fp/proximity_state    u:object_r:sysfs_fpc_proximity:s0
+/sys/devices/platform/soc/soc:fingerprint_detect/sensor_version    u:object_r:sysfs_fpc:s0
+
+# Persist files
+/mnt/vendor/persist/camera(/.*)?                     u:object_r:persist_camera_file:s0
+/mnt/vendor/persist/goodix(/.*)?                     u:object_r:persist_fingerprint_file:s0
+/mnt/vendor/persist/dual_camera_calibration(/.*)?    u:object_r:persist_camera_file:s0
+/mnt/vendor/persist/engineermode(/.*)?               u:object_r:persist_engineer_file:s0
+
+# Custom HALs
+/vendor/bin/hw/lineage\.livedisplay@2\.1-service\.oneplus_sdm845                                 u:object_r:hal_livedisplay_sdm845_exec:s0
+/vendor/bin/hw/android\.hardware\.power-service\.op6-libperfmgr                                  u:object_r:hal_power_default_exec:s0
+/vendor/bin/hw/android\.hardware\.power\.stats@1\.0-service\.op6                                 u:object_r:hal_power_stats_default_exec:s0
+/vendor/bin/hw/android\.hardware\.atrace@1.0-service\.pixel                                      u:object_r:hal_atrace_default_exec:s0
+/vendor/bin/hw/android\.hardware\.lights-service\.onelpus_sdm845                                 u:object_r:hal_light_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.dolby\.hardware\.dms@1\.0-service                         u:object_r:hal_dms_default_exec:s0
+
+# HALs
+/(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.camera@1\.0-service                    u:object_r:hal_cameraHIDL_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.CameraMDMHIDL@1\.0-service             u:object_r:hal_cameraHIDL_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.display@1\.0-service     u:object_r:hal_display_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.drmkey@1\.0-service      u:object_r:hal_drm_widevine_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.hdcpkey@1\.0-service     u:object_r:hal_hdcpkey_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.ifaa@2\.0-service        u:object_r:hal_ifaa_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.wifi@1\.0-service        u:object_r:hal_wifi_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.secure_element@1\.1-service      u:object_r:hal_secure_element_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.qti\.media\.c2@1\.0-service                 u:object_r:mediacodec_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.cvp@1\.0-service             u:object_r:vendor_cvp_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.neuralnetworks@1\.2-service-qti  u:object_r:hal_neuralnetworks_default_exec:s0
+
+# DASH
+/(vendor|system/vendor)/bin/dashd                   u:object_r:dashd_exec:s0
+
+/(vendor|system/vendor)/bin/opf-service             u:object_r:opf_exec:s0
+
+/(vendor|system/vendor)/bin/mutualex                                                  u:object_r:vendor_mutualex_exec:s0
+
+# tri-state-key
+/(vendor|system/vendor)/bin/tri-state-key_daemon          u:object_r:tri-state-key_daemon_exec:s0
+
+# Hexagon DSP-side executable needed for Halide operation
+# This is labeled as public_adsprpcd_file as it needs to be read by apps
+# (e.g. Google Camera App)
+/mnt/vendor/dsp/fastrpc_shell_3                                               u:object_r:public_adsprpcd_file:s0

@@ -1,0 +1,1 @@
+allow ueventd unlabeled:dir rw_dir_perms;

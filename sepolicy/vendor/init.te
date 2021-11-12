@@ -1,0 +1,51 @@
+# Allow init to mount wlan kernel module
+allow init vendor_file:file mounton;
+
+# Allow init to mount vendor configs
+allow init vendor_configs_file:dir mounton;
+
+# Allow init to chown/chmod on pseudo files in /sys
+allow init sysfs_type:file { open read setattr };
+
+# Allow init create cgroups
+allow init cgroup:file create;
+
+allow init socket_device:sock_file { create setattr unlink };
+allow init sysfs_graphics:file rw_file_perms;
+
+allow init dash_device:chr_file { ioctl open read write };
+allow init dashd_exec:file { execute execute_no_trans getattr open read };
+
+allow init apex_metadata_file:lnk_file r_file_perms;
+
+allow init sysfs_zram:dir add_name;
+allow init sysfs_zram:file create;
+
+allow init hal_light_service:service_manager add;
+binder_call(init, servicemanager);
+
+allow init sysfs_leds:dir add_name;
+allow init sysfs_leds:file create;
+
+allow init vendor_data_file:file lock;
+allow init hal_audio_default:binder call;
+
+allow init device:chr_file r_file_perms;
+allow init hal_nfc_hwservice:hwservice_manager {find add};
+allow init nfc_device:chr_file rw_file_perms;
+
+binder_call(init, hwservicemanager);
+binder_call(init, hal_nfc_default);
+binder_call(init, secure_element);
+
+allow init device:chr_file w_file_perms;
+allow init param_block_device:blk_file w_file_perms
+;
+
+allow init adsprpcd_file:file mounton;
+
+allow init hal_param_hwservice:hwservice_manager { add find };
+allow init hal_secure_element_hwservice:hwservice_manager { add find };
+allow init hidl_base_hwservice:hwservice_manager add;
+
+permissive init;

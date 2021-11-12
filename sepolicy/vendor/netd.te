@@ -1,0 +1,3 @@
+allow netd tmpfs:dir { open read };
+allow netd sysfs_net:dir add_name;
+allow netd sysfs_net:file create;

@@ -1,0 +1,3 @@
+allow toolbox audio_device:dir { getattr relabelfrom };
+allow toolbox self:capability2 mac_admin;
+allow toolbox unlabeled:dir relabelto;

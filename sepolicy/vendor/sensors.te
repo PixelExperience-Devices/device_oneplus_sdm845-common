@@ -1,0 +1,13 @@
+# Allow sensors to get vendor_sensors_prop
+get_prop(sensors, vendor_sensors_prop)
+get_prop(sensors, sensors_dbg_prop)
+get_prop(sensors, sensors_prop)
+
+allow sensors sensors_vendor_data_file:dir rw_dir_perms;
+allow sensors sensors_vendor_data_file:file create_file_perms;
+allow sensors sensors_vendor_data_file:fifo_file r_file_perms;
+
+allow sensors qdsp_device:chr_file r_file_perms;
+allow sensors ion_device:chr_file r_file_perms;
+
+wakelock_use(sensors)

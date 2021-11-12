@@ -1,0 +1,32 @@
+allow hal_power_default debugfs_wlan:dir r_dir_perms;
+allow hal_power_default debugfs_wlan:file r_file_perms;
+
+allow hal_power_default sysfs_graphics:dir search;
+allow hal_power_default sysfs_graphics:file r_file_perms;
+
+allow hal_power_default sysfs_rpm:file r_file_perms;
+allow hal_power_default sysfs_system_sleep_stats:file r_file_perms;
+
+# To do powerhint on nodes defined in powerhint.json
+allow hal_power_default sysfs_devfreq:dir search;
+allow hal_power_default sysfs_devfreq:{ file lnk_file } rw_file_perms;
+allow hal_power_default sysfs_kgsl:dir search;
+allow hal_power_default sysfs_kgsl:{ file lnk_file } rw_file_perms;
+allow hal_power_default sysfs_msm_subsys:dir search;
+allow hal_power_default sysfs_msm_subsys:file rw_file_perms;
+allow hal_power_default sysfs_devices_system_cpu:file rw_file_perms;
+allow hal_power_default device_latency:chr_file rw_file_perms;
+
+allow hal_power_default input_device:dir r_dir_perms;
+allow hal_power_default input_device:chr_file rw_file_perms;
+
+# To get/set powerhal state property
+set_prop(hal_power_default, vendor_power_prop)
+allow hal_power_default system_prop:file r_file_perms;
+
+# Rule for hal_power_default to access graphics composer process
+unix_socket_connect(hal_power_default, pps, hal_graphics_composer_default);
+
+# Allow powerhal trigger dt2s node
+allow hal_power_default proc_touchpanel:dir search;
+allow hal_power_default proc_touchpanel:file rw_file_perms;

@@ -1,0 +1,39 @@
+permissive vendor_init;
+set_prop(vendor_init, vendor_video_prop)
+
+#type qti_init_shell_exec, exec_type, vendor_file_type,file_type;
+
+# Allow vendor_init to set public_vendor_default_prop
+set_prop(vendor_init, public_vendor_default_prop)
+typeattribute vendor_init data_between_core_and_vendor_violators;
+
+# Allow vendor_init to check encryption status of system_data_file
+allow vendor_init system_data_file:dir { ioctl open read setattr };
+
+# Allow vendor_init to set vendor_camera_prop
+set_prop(vendor_init, vendor_camera_prop)
+set_prop(vendor_init, camera_prop)
+
+# Allow vendor_init to set vendor_power_prop
+set_prop(vendor_init, vendor_power_prop);
+
+allow vendor_init default_prop:file read;
+allow vendor_init freq_prop:property_service set;
+allow vendor_init proc:file create;
+allow vendor_init sysfs:file create;
+allow vendor_init sysfs_devfreq:file create;
+allow vendor_init sysfs_devices_system_cpu:file create;
+allow vendor_init sysfs_scsi_host:file create;
+allow vendor_init sysfs_ssr_toggle:file w_file_perms;
+allow vendor_init camera_data_file:dir rw_dir_perms;
+allow vendor_init cgroup:file getattr;
+allow vendor_init dash_device:chr_file getattr;
+allow vendor_init display_data_file:dir getattr;
+allow vendor_init fpc_images_file:dir { getattr search };
+allow vendor_init nfc_data_file:dir { getattr setattr };
+allow vendor_init tmpfs:dir { add_name create write };
+allow vendor_init tombstone_data_file:dir getattr;
+allow vendor_init camera_data_file:file create_file_perms;
+allow vendor_init sysfs:dir add_name;
+allow vendor_init sysfs_devfreq:dir add_name;
+allow vendor_init apex_metadata_file:dir create_dir_perms;

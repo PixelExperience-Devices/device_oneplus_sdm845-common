@@ -1,0 +1,1 @@
+binder_call(secure_element, init);

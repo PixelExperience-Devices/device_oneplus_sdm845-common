@@ -1,0 +1,4 @@
+r_dir_file(iorap_prefetcherd, media_rw_data_file)
+r_dir_file(iorap_prefetcherd, radio_data_file)
+r_dir_file(iorap_prefetcherd, system_data_file)
+allow iorap_prefetcherd vendor_file: file r_file_perms;
