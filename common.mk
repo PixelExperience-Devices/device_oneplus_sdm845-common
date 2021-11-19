@@ -395,10 +395,10 @@ PRODUCT_PACKAGES += \
 
 # OnePlus
 PRODUCT_PACKAGES += \
-    oneplus-fwk
+    oneplus-fwk.oneplus_sdm845
 
-#PRODUCT_BOOT_JARS += \
-#    oneplus-fwk
+PRODUCT_BOOT_JARS += \
+    oneplus-fwk.oneplus_sdm845
     
 # OnePlus Camera HIDL
 PRODUCT_PACKAGES += \
@@ -501,7 +501,6 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/oneplus
 
 # Telephony
 PRODUCT_PACKAGES += \
