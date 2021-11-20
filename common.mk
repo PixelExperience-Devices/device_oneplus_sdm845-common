@@ -303,10 +303,6 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1 \
     android.hardware.keymaster@4.1.vendor
 
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    lineage.livedisplay@2.1-service.oneplus_sdm845
-
 PRODUCT_PACKAGES += \
     libavservices_minijail
     
