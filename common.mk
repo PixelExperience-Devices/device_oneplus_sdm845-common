@@ -76,7 +76,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AntHalService-Soong
 
- #Audio
+# Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-impl \
     android.hardware.audio@2.0-service \
@@ -102,7 +102,7 @@ PRODUCT_PACKAGES += \
     tinymix \
     libtinycompress \
     OnePlusDiracGef
-    
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
     $(LOCAL_PATH)/audio/audio_platform_info_i2s.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_i2s.xml \
@@ -133,13 +133,13 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
-    
+
 # Boot control HAL
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl \
     android.hardware.boot@1.0-service \
     bootctrl.sdm845
-    
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio@2.0-impl \
@@ -163,18 +163,17 @@ PRODUCT_PACKAGES += \
     Snap \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service
-    
+
 # Codec2
 PRODUCT_PACKAGES += \
     libcodec2_vndk.vendor \
     libcodec2_hidl@1.0.vendor
-    
+
 # Codec2 modules
 PRODUCT_PACKAGES += \
     com.android.media.swcodec \
     libsfplugin_ccodec
-    
-    
+
 # Context Hub
 PRODUCT_PACKAGES += \
     android.hardware.contexthub@1.0-impl.generic \
@@ -201,38 +200,29 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.composer@2.3-impl \
     android.hardware.graphics.composer@2.3-service \
     android.hardware.graphics.mapper@2.0-impl-qti-display \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
     gralloc.sdm845 \
     hwcomposer.sdm845 \
-    libdisplayconfig \
-    libdisplayconfig.vendor \
     libdisplayconfig.qti \
     libvulkan \
-    libdisplayconfig \
     libqdMetaData \
     libqdMetaData.system \
     libtinyxml \
-    memtrack.sdm845 \
+    libtinyxml.vendor \
     vendor.display.config@1.0.vendor \
     vendor.display.config@2.0 \
     vendor.display.config@2.0.vendor \
     memtrack.sdm845 \
     vendor.qti.hardware.display.allocator@1.0-service \
-    vendor.qti.hardware.display.mapper@1.0.vendor \
-    vendor.qti.hardware.display.mapper@1.1.vendor \
-    vendor.qti.hardware.display.mapper@2.0.vendor \
-    vendor.qti.hardware.display.mapper@3.0.vendor \
-    vendor.qti.hardware.display.mapper@4.0.vendor \
     vendor.oneplus.hardware.display@1.0.vendor
-    
+
 # Doze
 PRODUCT_PACKAGES += \
     OnePlusDoze
-    
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3-service.clearkey \
@@ -243,13 +233,13 @@ PRODUCT_PACKAGES += \
 # fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
-    
+
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0 \
     android.hardware.gatekeeper@1.0.vendor
-    
-# GPS
+
+# GNSS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0 \
     android.hardware.gnss@1.0.vendor \
@@ -257,9 +247,7 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@1.1.vendor \
     android.hardware.gnss@2.1 \
     android.hardware.gnss@2.1.vendor \
-    android.hardware.power@1.2 \
-    android.hardware.power@1.2.vendor
-    
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl-qti \
@@ -272,7 +260,7 @@ PRODUCT_PACKAGES += \
     libhidltransport.vendor \
     libhwbinder \
     libhwbinder.vendor
-    
+
 # Dummy HIDL packages
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
@@ -295,7 +283,7 @@ PRODUCT_PACKAGES += \
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.oneplus_sdm845
-    
+
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0 \
@@ -305,8 +293,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libavservices_minijail
-    
-    
+
 # Media
 PRODUCT_PACKAGES += \
     libxml2 \
@@ -337,7 +324,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml \
     $(LOCAL_PATH)/configs/system_properties.xml:$(TARGET_COPY_OUT_VENDOR)/etc/system_properties.xml
 
-
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2.xml \
@@ -346,7 +332,7 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml
-    
+
 # Misc configs
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf \
@@ -355,7 +341,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-ims.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-ims.xml \
     $(LOCAL_PATH)/display/qdcm_calib_data_samsung_s6e3fc2x01_cmd_mode_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_samsung_s6e3fc2x01_cmd_mode_dsi_panel.xml \
     $(LOCAL_PATH)/display/qdcm_calib_data_samsung_sofef00_m_cmd_mode_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_samsung_sofef00_m_cmd_mode_dsi_panel.xml
-    
+
 # Native libraries whitelist
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
@@ -382,7 +368,7 @@ PRODUCT_PACKAGES += \
     libchrome.vendor \
     Tag \
     vendor.nxp.nxpnfc@1.0
-    
+
 # Neural Networks
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.0 \
@@ -400,7 +386,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     oneplus-fwk.oneplus_sdm845
-    
+
 # OnePlus Camera HIDL
 PRODUCT_PACKAGES += \
     libqti-perfd-client
@@ -408,15 +394,17 @@ PRODUCT_PACKAGES += \
 # OPFeature
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/odm_feature_list:$(TARGET_COPY_OUT_ODM)/etc/odm_feature_list
-    
+
 # RenderScript
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
 
 # Power
 PRODUCT_PACKAGES += \
-    power.qcom:64
-    
+    power.qcom:64 \
+    android.hardware.power@1.2 \
+    android.hardware.power@1.2.vendor
+
 # Pixel Offline charger
 PRODUCT_PACKAGES += \
     charger_res_images \
@@ -430,11 +418,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-vendorcompat \
     libprotobuf-cpp-lite-vendorcompat
-    
+
 # QTI
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect.vendor
-    
+
 # Radio
 PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.0 \
@@ -456,8 +444,7 @@ PRODUCT_PACKAGES += \
     android.system.net.netd@1.1.vendor \
     libjson \
     librmnetctl
-    
-    
+
 # Permissions (device)
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hce.xml \
@@ -465,7 +452,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.hifi_sensors.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.hifi_sensors.xml \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml
-    
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -545,11 +531,11 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
-    
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service
-    
+
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl \
@@ -569,7 +555,7 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf \
     WifiOverlay
-    
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/hostapd.accept:$(TARGET_COPY_OUT_VENDOR)/etc/hostapd/hostapd.accept \
     $(LOCAL_PATH)/wifi/hostapd.conf:$(TARGET_COPY_OUT_VENDOR)/etc/hostapd/hostapd_default.conf \
@@ -587,5 +573,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-wfd.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-wfd.xml
-    
-    VENDOR_SECURITY_PATCH = 2021-10-01
+
+# Vendor security patch level
+VENDOR_SECURITY_PATCH = 2021-10-01
