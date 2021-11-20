@@ -410,10 +410,6 @@ PRODUCT_PACKAGES += \
     charger_res_images \
     product_charger_res_images
 
-# Prebuilts
-PRODUCT_PACKAGES += \
-   OnePlusGallery
-
 # Protobuf
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-vendorcompat \
