@@ -29,7 +29,7 @@ $(call inherit-product, vendor/oneplus/sdm845-common/sdm845-common-vendor.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-syberia
+    $(LOCAL_PATH)/overlay-aosp
 
 PRODUCT_PACKAGES += \
     OdmOverlay-OPSystemUI \
@@ -484,10 +484,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.0-service.multihal \
     libsensorndkbridge
-
-# Smart Charge
-PRODUCT_PACKAGES += \
-    vendor.syberia.smartcharge@1.0-service
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
