@@ -218,7 +218,8 @@ PRODUCT_PACKAGES += \
     memtrack.sdm845 \
     vendor.qti.hardware.display.allocator@1.0-service \
     vendor.oneplus.hardware.display@1.0.vendor \
-    vendor.qti.hardware.display.mapper@3.0.so
+    vendor.qti.hardware.display.mapper@3.0.so \
+    vendor.qti.hardware.display.mapperextensions@1.0
 
 # Doze
 PRODUCT_PACKAGES += \
