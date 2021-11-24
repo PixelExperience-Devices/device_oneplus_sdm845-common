@@ -198,6 +198,10 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     ueventd.qcom.rc
 
+# Dex-PreOpt
+PRODUCT_PACKAGES += \
+    cppreopts.sh
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.3-service \
