@@ -366,17 +366,18 @@ PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2 \
     android.hardware.nfc@1.2-service \
     android.hardware.secure_element@1.0 \
-    android.hardware.secure_element@1.1 \
     android.hardware.secure_element@1.0.vendor \
+    android.hardware.secure_element@1.1 \
     android.hardware.secure_element@1.1.vendor \
     android.hardware.secure_element@1.2 \
     android.hardware.secure_element@1.2.vendor \
     com.android.nfc_extras \
-    NfcNci \
+    vendor.nxp.nxpese@1.0:64 \
+    vendor.nxp.nxpnfc@1.0:64 \
     SecureElement \
     libchrome.vendor \
+    libjni_shim \
     Tag \
-    vendor.nxp.nxpnfc@1.0
 
 # Neural Networks
 PRODUCT_PACKAGES += \
