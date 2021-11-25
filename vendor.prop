@@ -97,6 +97,9 @@ vendor.audio.feature.wsa.enable=false
 vendor.audio.feature.audiozoom.enable=false
 vendor.audio.feature.snd_mon.enable=true
 
+# APEX
+ro.apex.updatable=false
+
 # ADB
 ro.boot.adb=true
 
