@@ -26,3 +26,4 @@ allow hal_audio_default hal_dms_default:binder { transfer call };
 
 # Allow hal_audio_default to find hal_dms_hwservice
 allow hal_audio_default hal_dms_hwservice:hwservice_manager find;
+allow hal_audio_default opf_file:file r_file_perms;

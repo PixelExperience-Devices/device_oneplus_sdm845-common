@@ -1,1 +1,4 @@
 allow ueventd unlabeled:dir rw_dir_perms;
+allow ueventd debugfs:dir { open read relabelfrom };
+allow ueventd debugfs:file getattr;
+allow ueventd debugfs_wakeup_sources:file getattr;

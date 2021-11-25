@@ -34,3 +34,4 @@ allow hal_camera_default qdsp_device:chr_file r_file_perms;
 allow hal_camera_default public_adsprpcd_file:file r_file_perms;
 
 allow hal_camera_default vendor_shell_exec:file { execute execute_no_trans };
+allow hal_camera_default self:socket { create ioctl read write };

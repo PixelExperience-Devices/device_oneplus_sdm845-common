@@ -36,12 +36,14 @@
 /mnt/vendor/persist/engineermode(/.*)?               u:object_r:persist_engineer_file:s0
 
 # Custom HALs
+/vendor/bin/hw/lineage\.livedisplay@2\.1-service\.oneplus_sdm845                                 u:object_r:hal_livedisplay_sdm845_exec:s0
 /vendor/bin/hw/android\.hardware\.power-service\.op6-libperfmgr                                  u:object_r:hal_power_default_exec:s0
 /vendor/bin/hw/android\.hardware\.power\.stats@1\.0-service\.op6                                 u:object_r:hal_power_stats_default_exec:s0
 /vendor/bin/hw/android\.hardware\.atrace@1.0-service\.pixel                                      u:object_r:hal_atrace_default_exec:s0
-/vendor/bin/hw/android\.hardware\.lights-service\.onelpus_sdm845                                 u:object_r:hal_light_default_exec:s0
 
 # HALs
+/(vendor|system/vendor)/bin/hw/android\.hardware\.lights-service\.onelpus_sdm845                 u:object_r:hal_light_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.dolby\.hardware\.dms@1\.0-service                         u:object_r:hal_dms_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.camera@1\.0-service                    u:object_r:hal_cameraHIDL_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.CameraMDMHIDL@1\.0-service             u:object_r:hal_cameraHIDL_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.display@1\.0-service     u:object_r:hal_display_default_exec:s0
@@ -49,11 +51,11 @@
 /(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.hdcpkey@1\.0-service     u:object_r:hal_hdcpkey_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.ifaa@2\.0-service        u:object_r:hal_ifaa_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.wifi@1\.0-service        u:object_r:hal_wifi_default_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.secure_element@1\.1-service      u:object_r:hal_secure_element_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.secure_element@1\.2-service      u:object_r:hal_secure_element_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.media\.c2@1\.0-service                 u:object_r:mediacodec_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.cvp@1\.0-service             u:object_r:vendor_cvp_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.neuralnetworks@1\.2-service-qti  u:object_r:hal_neuralnetworks_default_exec:s0
-(system_ext|system/system_ext)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.oneplus_fajita          u:object_r:hal_fingerprint_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.vibrator\.service\.oneplus_sdm845          u:object_r:hal_vibrator_default_exec:s0
 
 # DASH
 /(vendor|system/vendor)/bin/dashd                   u:object_r:dashd_exec:s0
@@ -61,6 +63,12 @@
 /(vendor|system/vendor)/bin/opf-service             u:object_r:opf_exec:s0
 
 /(vendor|system/vendor)/bin/mutualex                                                  u:object_r:vendor_mutualex_exec:s0
+
+# Oneshot IRQ rebalancer
+/vendor/bin/rebalance_interrupts-op6           u:object_r:rebalance_interrupts_vendor_exec:s0
+
+# tri-state-key
+/(vendor|system/vendor)/bin/tri-state-key_daemon          u:object_r:tri-state-key_daemon_exec:s0
 
 # Hexagon DSP-side executable needed for Halide operation
 # This is labeled as public_adsprpcd_file as it needs to be read by apps

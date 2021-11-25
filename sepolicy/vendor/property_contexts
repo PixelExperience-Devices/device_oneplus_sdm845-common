@@ -21,7 +21,7 @@ vendor.powerhal.init       u:object_r:vendor_power_prop:s0
 vendor.powerhal.rendering  u:object_r:vendor_power_prop:s0
 
 # Netmgr
-persist.vendor.data.qmipriod_load u:object_r:data_qmipriod_prop:s0
+persist.vendor.data.qmipriod_load u:object_r:vendor_radio_prop:s0
 
 # NFC
 persist.vendor.nfc.        u:object_r:vendor_nfc_prop:s0
@@ -34,11 +34,10 @@ vendor.oem.nfc.            u:object_r:vendor_nfc_prop:s0
 persist.vendor.dolby.      u:object_r:vendor_dolby_loglevel_prop:s0
 
 # RIL
-ro.ril.supportLTE               u:object_r:radio_prop:s0
+ro.ril.supportLTE               u:object_r:vendor_radio_prop:s0
 vendor.oem.bt.addr              u:object_r:vendor_radio_prop:s0
 vendor.oem.device.imeicache1    u:object_r:vendor_radio_prop:s0
 vendor.oem.device.imeicache2    u:object_r:vendor_radio_prop:s0
 
 # Thermal
-persist.sys.thermal.       u:object_r:thermal_engine_prop:s0
-
+persist.sys.thermal.       u:object_r:vendor_thermal_engine_prop:s0

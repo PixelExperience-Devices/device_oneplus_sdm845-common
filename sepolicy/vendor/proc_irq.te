@@ -1,0 +1,1 @@
+allow proc_irq proc:filesystem associate;

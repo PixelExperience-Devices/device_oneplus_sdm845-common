@@ -22,3 +22,6 @@ type fpc_images_file, file_type, core_data_file_type, data_file_type;
 type opf_file, file_type;
 
 type public_adsprpcd_file, file_type;
+
+type sysfs_irq, fs_type, sysfs_type;
+type proc_irq, fs_type, proc_type;

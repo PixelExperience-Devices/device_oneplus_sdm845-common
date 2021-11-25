@@ -1,3 +1,5 @@
+#typeattribute hal_sensors_default binder_in_vendor_violators;
+
 # Allow hal_sensors_default to use binder service
 binder_use(hal_sensors_default)
 
@@ -43,4 +45,4 @@ allow hal_sensors_default proc_touchpanel:file rw_file_perms;
 r_dir_file(hal_sensors_default, sysfs_graphics)
 
 get_prop(hal_sensors_default, default_prop);
-get_prop(hal_sensors_default, sensors_dbg_prop);
+get_prop(hal_sensors_default, vendor_sensors_dbg_prop);

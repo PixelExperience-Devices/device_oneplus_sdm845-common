@@ -1,6 +1,6 @@
 # Allow sensors to get vendor_sensors_prop
 get_prop(sensors, vendor_sensors_prop)
-get_prop(sensors, sensors_dbg_prop)
+get_prop(sensors, vendor_sensors_dbg_prop)
 get_prop(sensors, sensors_prop)
 
 allow sensors sensors_vendor_data_file:dir rw_dir_perms;
