@@ -934,9 +934,7 @@ system_ext/framework/com.nxp.nfc.jar
 system_ext/lib64/libnxpnfc-nci.so
 system_ext/lib64/libnxpnfc_nci_jni.so
 vendor/bin/hw/android.hardware.nfc@1.2-service
-vendor/bin/hw/android.hardware.secure_element@1.2-service
 vendor/etc/init/android.hardware.nfc@1.2-service.rc
-vendor/etc/init/android.hardware.secure_element@1.2-service.rc
 vendor/lib/ese_client.so
 vendor/lib/libp61-jcop-kit.so
 vendor/lib64/ese_client.so
@@ -948,6 +946,10 @@ vendor/lib64/nfc_nci_nxp.so
 vendor/lib64/vendor.nxp.eventprocessor@1.0.so
 vendor/lib64/vendor.nxp.nxpese@1.0.so
 vendor/lib64/vendor.nxp.nxpnfc@1.0.so
+
+# Secure Element from OnePlus 7 RKQ1.201022.002
+vendor/bin/hw/android.hardware.secure_element@1.0-service
+vendor/etc/init/android.hardware.secure_element@1.0-service.rc
 
 # NFC Configs
 vendor/etc/libese-nxp.conf
