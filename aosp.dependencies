@@ -1,0 +1,20 @@
+[
+  {
+    "repository": "SevralT/hardware_oneplus",
+    "target_path": "hardware/oneplus"
+    "branch": "twelve-wip",
+    "remote: "github"
+  },
+  {
+    "repository": "kernel_oneplus_sdm845",
+    "target_path": "kernel/oneplus/sdm845"
+    "branch": "twelve-wip",
+    "remote": "pixel-devices"
+  },
+  {
+    "repository": "vendor_oneplus_sdm845-common",
+    "target_path": "vendor/oneplus/sdm845-common"
+    "branch": "twelve-wip",
+    "remote": "pixel-devices-blobs"
+  }
+]
