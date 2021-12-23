@@ -1,0 +1,19 @@
+[
+  {
+    "repository"  : "hardware_oneplus",
+    "target_path" : "hardware/oneplus",
+    "remote"      : "pixel"
+  },
+  {
+    "repository"  : "LineageOS/android_kernel_oneplus_sdm845",
+    "target_path" : "kernel/oneplus/sdm845",
+    "branch"      : "lineage-18.1",
+    "remote"      : "github"
+  },
+  {
+    "repository"  : "vendor_oneplus_sdm845-common",
+    "target_path" : "vendor/oneplus/sdm845-common",
+    "branch"      : "eleven",
+    "remote"      : "pixel-devices-blobs"
+  }
+]
