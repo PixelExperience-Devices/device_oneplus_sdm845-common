@@ -5,9 +5,9 @@
     "remote"      : "pixel"
   },
   {
-    "repository"  : "LineageOS/android_kernel_oneplus_sdm845",
+    "repository"  : "Terminator-J/crdroid_kernel_oneplus_sdm845",
     "target_path" : "kernel/oneplus/sdm845",
-    "branch"      : "lineage-18.1",
+    "branch"      : "11.0-test",
     "remote"      : "github"
   },
   {
