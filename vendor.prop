@@ -142,6 +142,8 @@ ro.surface_flinger.wcg_composition_dataspace=143261696
 ro.vendor.display.cabl=0
 vendor.display.enable_default_color_mode=0
 debug.sf.predict_hwc_composition_strategy=0
+debug.hwui.use_hint_manager=true
+debug.hwui.target_cpu_time_percent=30
 
 # DPM
 persist.vendor.dpmhalservice.enable=1
