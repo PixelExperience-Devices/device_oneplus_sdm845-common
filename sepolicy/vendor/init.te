@@ -1,3 +1,5 @@
 allow init adsprpcd_file:file mounton;
 allow init op1_file:dir mounton;
 allow init op2_file:dir mounton;
+allow init per_boot_file:file ioctl;
+allowxperm init per_boot_file:file ioctl { F2FS_IOC_SET_PIN_FILE };
