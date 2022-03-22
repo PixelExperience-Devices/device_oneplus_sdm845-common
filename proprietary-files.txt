@@ -172,6 +172,7 @@ vendor/lib/libarcsoft_dualcam_refocus_right.so
 vendor/lib/libarcsoft_hdr_denoise_api.so
 vendor/lib/libarcsoft_high_dynamic_range.so
 vendor/lib/libarcsoft_smart_denoise.so
+vendor/lib/libblur_halide.so
 vendor/lib/libc++_extra.so
 vendor/lib/libcamxfdalgov7.so
 vendor/lib/libcamxfdengine.so
@@ -179,6 +180,7 @@ vendor/lib/libcamxstatscore.so
 vendor/lib/libcamxtintlessalgo.so
 vendor/lib/libcom.qti.chinodeutils.so
 vendor/lib/libcvface_api.so
+vendor/lib/libhalide_hexagon_host.so
 vendor/lib/libmmcamera_faceproc.so
 vendor/lib/libmmcamera_faceproc2.so
 vendor/lib/libmms_gyro_vstab.so
