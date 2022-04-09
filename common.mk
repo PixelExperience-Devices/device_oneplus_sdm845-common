@@ -157,7 +157,8 @@ PRODUCT_PACKAGES += \
     liba2dpoffload \
     vendor.qti.hardware.bluetooth_audio@2.1.vendor \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
-    vendor.qti.hardware.btconfigstore@2.0.vendor
+    vendor.qti.hardware.btconfigstore@2.0.vendor \
+    vendor.qti.hardware.capabilityconfigstore@1.0.vendor
 
 # Boot control
 PRODUCT_PACKAGES += \
