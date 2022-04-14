@@ -116,6 +116,13 @@ DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 # Init
 TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_sdm845
 
+# LiveDisplay
+ifneq ("$(wildcard hardware/lineage/livedisplay)", "")
+SOONG_CONFIG_NAMESPACES += livedisplay
+SOONG_CONFIG_livedisplay += enabled
+SOONG_CONFIG_livedisplay_enabled := true
+endif
+
 # LMKD
 TARGET_LMKD_STATS_LOG := true
 

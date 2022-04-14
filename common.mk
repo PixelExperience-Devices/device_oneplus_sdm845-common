@@ -309,8 +309,10 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
 
 # LiveDisplay
+ifneq ("$(wildcard hardware/lineage/livedisplay)", "")
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.1-service.oneplus_sdm845
+endif
 
 # Media
 PRODUCT_PACKAGES += \

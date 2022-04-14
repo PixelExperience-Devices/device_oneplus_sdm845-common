@@ -13,17 +13,43 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+soong_config_module_type {
+    name: "livedisplay_cc_defaults",
+    module_type: "cc_defaults",
+    config_namespace: "livedisplay",
+    bool_variables: ["enabled"],
+    properties: ["srcs", "shared_libs", "header_libs"],
+}
+
+livedisplay_cc_defaults {
+    name: "livedisplay_defaults",
+    soong_config_variables: {
+        enabled: {
+            srcs: [
+                ":vendor.lineage.livedisplay@2.0-sdm-pa",
+                ":vendor.lineage.livedisplay@2.0-sdm-utils",
+                ":vendor.lineage.livedisplay@2.1-oneplus-af",
+                ":vendor.lineage.livedisplay@2.1-oneplus-se",
+            ],
+            shared_libs: [
+                "vendor.lineage.livedisplay@2.0",
+                "vendor.lineage.livedisplay@2.1",
+            ],
+            header_libs: [
+                "vendor.lineage.livedisplay@2.0-sdm-headers",
+                "vendor.lineage.livedisplay@2.1-oneplus-headers",
+            ],
+        },
+    },
+}
+
 cc_binary {
     name: "vendor.lineage.livedisplay@2.1-service.oneplus_sdm845",
-    defaults: ["hidl_defaults"],
+    defaults: ["hidl_defaults", "livedisplay_defaults"],
     init_rc: ["vendor.lineage.livedisplay@2.1-service.oneplus_sdm845.rc"],
     vintf_fragments: ["vendor.lineage.livedisplay@2.1-service.oneplus_sdm845.xml"],
     relative_install_path: "hw",
     srcs: [
-        ":vendor.lineage.livedisplay@2.0-sdm-pa",
-        ":vendor.lineage.livedisplay@2.0-sdm-utils",
-        ":vendor.lineage.livedisplay@2.1-oneplus-af",
-        ":vendor.lineage.livedisplay@2.1-oneplus-se",
         "DisplayModes.cpp",
         "service.cpp",
     ],
@@ -32,12 +58,6 @@ cc_binary {
         "libbinder",
         "libhidlbase",
         "libutils",
-        "vendor.lineage.livedisplay@2.0",
-        "vendor.lineage.livedisplay@2.1",
-    ],
-    header_libs: [
-        "vendor.lineage.livedisplay@2.0-sdm-headers",
-        "vendor.lineage.livedisplay@2.1-oneplus-headers",
     ],
     proprietary: true,
 }
