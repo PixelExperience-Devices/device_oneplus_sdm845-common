@@ -9,6 +9,7 @@ type public_adsprpcd_file, file_type;
 type proc_touchpanel, fs_type, proc_type;
 
 # sysfs
+type sysfs_aod, fs_type, sysfs_type;
 type sysfs_dash_charger, fs_type, proc_type, sysfs_type;
 type sysfs_fod, fs_type, sysfs_type;
 type sysfs_fpc, fs_type, sysfs_type;

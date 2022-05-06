@@ -23,8 +23,8 @@ cc_binary {
         ":vendor.lineage.livedisplay@2.0-sdm-pa",
         ":vendor.lineage.livedisplay@2.0-sdm-utils",
         ":vendor.lineage.livedisplay@2.1-oneplus-af",
+        ":vendor.lineage.livedisplay@2.1-oneplus-se",
         "DisplayModes.cpp",
-        "SunlightEnhancement.cpp",
         "service.cpp",
     ],
     shared_libs: [

@@ -13,6 +13,7 @@ binder_call(hal_display_default, hal_display_color)
 allow hal_display_default hal_display_postproc_hwservice:hwservice_manager find;
 
 allow hal_display_default sysfs:file rw_file_perms;
+allow hal_display_default sysfs_aod:file rw_file_perms;
 allow hal_display_default sysfs_fod:file rw_file_perms;
 
 get_prop(hal_display_default, hwservicemanager_prop)

@@ -20,53 +20,81 @@
 #include <binder/ProcessState.h>
 #include <hidl/HidlTransportSupport.h>
 #include <livedisplay/oneplus/AntiFlicker.h>
+#include <livedisplay/oneplus/SunlightEnhancement.h>
 #include <livedisplay/sdm/PictureAdjustment.h>
-#include "DisplayModes.h"
-#include "SunlightEnhancement.h"
+#include <vendor/lineage/livedisplay/2.1/IPictureAdjustment.h>
 
-using ::vendor::lineage::livedisplay::V2_0::IPictureAdjustment;
+#include "DisplayModes.h"
+
+using android::OK;
+using android::sp;
+using android::status_t;
+using android::hardware::configureRpcThreadpool;
+using android::hardware::joinRpcThreadpool;
+
 using ::vendor::lineage::livedisplay::V2_0::sdm::PictureAdjustment;
 using ::vendor::lineage::livedisplay::V2_0::sdm::SDMController;
 using ::vendor::lineage::livedisplay::V2_1::IAntiFlicker;
 using ::vendor::lineage::livedisplay::V2_1::IDisplayModes;
+using ::vendor::lineage::livedisplay::V2_1::IPictureAdjustment;
 using ::vendor::lineage::livedisplay::V2_1::ISunlightEnhancement;
 using ::vendor::lineage::livedisplay::V2_1::implementation::AntiFlicker;
 using ::vendor::lineage::livedisplay::V2_1::implementation::DisplayModes;
 using ::vendor::lineage::livedisplay::V2_1::implementation::SunlightEnhancement;
 
 int main() {
+    status_t status = OK;
+
+    android::ProcessState::initWithDriver("/dev/vndbinder");
+
+    LOG(INFO) << "LiveDisplay HAL service is starting.";
+
     std::shared_ptr<SDMController> controller = std::make_shared<SDMController>();
-    android::sp<IAntiFlicker> afService = new AntiFlicker();
-    android::sp<IDisplayModes> modesService = new DisplayModes();
-    android::sp<IPictureAdjustment> paService = new PictureAdjustment(controller);
-    android::sp<ISunlightEnhancement> sreService = new SunlightEnhancement();
+    sp<AntiFlicker> af = new AntiFlicker();
+    sp<DisplayModes> dm = new DisplayModes(controller);
+    sp<PictureAdjustment> pa = new PictureAdjustment(controller);
+    sp<SunlightEnhancement> se = new SunlightEnhancement();
 
-    android::hardware::configureRpcThreadpool(2, true /*callerWillJoin*/);
+    configureRpcThreadpool(1, true /*callerWillJoin*/);
 
-    if (afService->registerAsService() != android::OK) {
-        LOG(ERROR) << "Cannot register anti flicker HAL service.";
-        return 1;
+    status = af->registerAsService();
+    if (status != OK) {
+        LOG(ERROR) << "Could not register service for LiveDisplay HAL AntiFlicker Iface ("
+                   << status << ")";
+        goto shutdown;
     }
 
-    if (modesService->registerAsService() != android::OK) {
-        LOG(ERROR) << "Cannot register display modes HAL service.";
-        return 1;
+    status = dm->registerAsService();
+    if (status != OK) {
+        LOG(ERROR) << "Could not register service for LiveDisplay HAL DisplayModes Iface ("
+                   << status << ")";
+        goto shutdown;
     }
 
-    if (paService->registerAsService() != android::OK) {
-        LOG(ERROR) << "Cannot register picture adjustment HAL service.";
-        return 1;
+    status = pa->registerAsService();
+    if (status != OK) {
+        LOG(ERROR) << "Could not register service for LiveDisplay HAL PictureAdjustment Iface ("
+                   << status << ")";
+        goto shutdown;
     }
 
-    if (sreService->registerAsService() != android::OK) {
-        LOG(ERROR) << "Cannot register sunlight enhancement HAL service.";
-        return 1;
+    status = se->registerAsService();
+    if (status != OK) {
+        LOG(ERROR) << "Could not register service for LiveDisplay HAL SunlightEnhancement Iface ("
+                   << status << ")";
+        goto shutdown;
     }
 
-    LOG(INFO) << "LiveDisplay HAL service ready.";
+    // Update default PA on setDisplayMode
+    dm->registerDisplayModeSetCallback(
+            std::bind(&PictureAdjustment::updateDefaultPictureAdjustment, pa));
 
-    android::hardware::joinRpcThreadpool();
+    LOG(INFO) << "LiveDisplay HAL service is ready.";
+    joinRpcThreadpool();
+    // Should not pass this line
 
-    LOG(ERROR) << "LiveDisplay HAL service failed to join thread pool.";
+shutdown:
+    // In normal operation, we don't expect the thread pool to shutdown
+    LOG(ERROR) << "LiveDisplay HAL service is shutting down.";
     return 1;
 }
