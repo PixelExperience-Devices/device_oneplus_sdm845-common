@@ -329,15 +329,6 @@ service hdcp_srm /vendor/bin/hdcp_srm
 #   group gps system qcom_diag diag log inet net_raw
 #   disabled
 
-on property:vold.decrypt=trigger_restart_framework
-   start cnss_diag
-
-service cnss_diag /system/vendor/bin/cnss_diag -q -f -t HELIUM
-   class main
-   user system
-   group system wifi inet sdcard_rw media_rw diag
-   oneshot
-
 service ppd /vendor/bin/mm-pp-dpps
     class late_start
     user system
