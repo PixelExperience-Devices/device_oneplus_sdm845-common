@@ -1,1 +1,2 @@
+dontaudit untrusted_app ashmem_device:chr_file open;
 dontaudit untrusted_app proc_net_tcp_udp:file read;
