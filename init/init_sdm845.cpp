@@ -39,6 +39,8 @@
 #include "property_service.h"
 #include "vendor_init.h"
 
+#include <fs_mgr_dm_linear.h>
+
 using android::base::GetProperty;
 
 void property_override(char const prop[], char const value[]) {
