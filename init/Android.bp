@@ -22,5 +22,6 @@ cc_library_static {
     ],
     shared_libs: [
         "libbase",
+        "libfs_mgr",
     ],
 }
