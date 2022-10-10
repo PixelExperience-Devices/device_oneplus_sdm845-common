@@ -16,6 +16,5 @@
 
 runtime_resource_overlay {
     name: "CaptivePortalUrlOverlay",
-    sdk_version: "current",
     product_specific: true,
 }
