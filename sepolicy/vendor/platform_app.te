@@ -1,3 +1,5 @@
+allow platform_app sysfs_graphics:file r_file_perms;
+
 hal_client_domain(platform_app, hal_ifaa)
 
 binder_call(platform_app, hal_ifaa_default)
