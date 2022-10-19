@@ -1,0 +1,2 @@
+allow fsck self:capability { kill };
+allow fsck op2_block_device:blk_file { ioctl open read write };

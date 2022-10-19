@@ -1,0 +1,2 @@
+allow qti_init_shell proc_watermark_scale_factor:file { open write };
+allow qti_init_shell sysfs:file { write };

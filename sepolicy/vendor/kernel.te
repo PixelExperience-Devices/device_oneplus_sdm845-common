@@ -1,1 +1,4 @@
 allow kernel per_boot_file:file r_file_perms;
+dontaudit kernel self:capability dac_override;
+dontaudit kernel self:capability dac_read_search;
+dontaudit kernel self:capability kill;

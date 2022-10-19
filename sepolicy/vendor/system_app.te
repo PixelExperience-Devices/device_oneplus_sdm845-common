@@ -7,4 +7,6 @@ allow system_app proc_vmallocinfo:file rw_file_perms;
 allow system_app sysfs_zram:dir { search };
 allow system_app sysfs_zram:file rw_file_perms;
 
+set_prop(system_app, qemu_hw_prop)
+
 set_prop(system_app, vendor_nfc_prop)
