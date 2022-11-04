@@ -471,4 +471,4 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # Statically linked GNU parted
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/parted/parted:$(TARGET_COPY_OUT_SYSTEM)/system/bin/parted
+    $(LOCAL_PATH)/parted/parted:$(TARGET_COPY_OUT_SYSTEM)/bin/parted
