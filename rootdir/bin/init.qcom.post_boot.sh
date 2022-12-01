@@ -842,6 +842,9 @@ function configure_zram_parameters() {
     #fi
     echo zstd > /sys/block/zram0/comp_algorithm
 
+    # set max_comp_streams to 8
+    echo 8 > /sys/block/zram0/max_comp_streams
+
     if [ -f /sys/block/zram0/disksize ]; then
         if [ -f /sys/block/zram0/use_dedup ]; then
             echo 1 > /sys/block/zram0/use_dedup
