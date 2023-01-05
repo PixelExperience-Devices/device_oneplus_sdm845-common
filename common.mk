@@ -347,6 +347,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     hardware/nxp/nfc/pn8x/halimpl/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf
 
+# OEM Unlock reporting
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.oem_unlock_supported=1
+
 # OnePlus
 PRODUCT_PACKAGES += \
     oneplus-fwk
