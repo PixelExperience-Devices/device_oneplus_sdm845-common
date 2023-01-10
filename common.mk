@@ -169,7 +169,7 @@ PRODUCT_PACKAGES += \
     bootctrl.sdm845 \
     bootctrl.sdm845.recovery
 
-PRODUCT_PACKAGES_DEBUG += \
+PRODUCT_PACKAGES += \
     bootctl
 
 # Camera
