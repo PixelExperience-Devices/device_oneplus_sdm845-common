@@ -432,6 +432,10 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@2.0-service.multihal \
     libsensorndkbridge
 
+# Statically linked GNU parted
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/parted/parted:$(TARGET_COPY_OUT_SYSTEM)/bin/parted
+
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.qti
@@ -502,6 +506,3 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.use_color_management=true \
     ro.surface_flinger.wcg_composition_dataspace=143261696
 
-# Statically linked GNU parted
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/parted/parted:$(TARGET_COPY_OUT_SYSTEM)/bin/parted
