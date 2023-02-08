@@ -291,8 +291,10 @@ vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service
 vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc
 vendor/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
--vendor/lib/libplatformconfig.so
--vendor/lib64/libplatformconfig.so
+
+# Configstore - from LineageOS 20
+-vendor/lib/libplatformconfig.so|2fce75367d6221c87dae801b5b60932feb87201f
+-vendor/lib64/libplatformconfig.so|4b15e715f43dad89b341f8cdfeeaad6226f409fd
 
 # Display
 vendor/bin/hw/vendor.oneplus.hardware.display@1.0-service
