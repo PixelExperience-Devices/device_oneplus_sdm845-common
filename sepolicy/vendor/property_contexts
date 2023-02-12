@@ -7,3 +7,8 @@ ro.fastbootd.available    u:object_r:exported_default_prop:s0
 
 # NFC
 persist.vendor.nfc.    u:object_r:vendor_nfc_prop:s0
+
+# RIL
+ro.ril.supportLTE           u:object_r:vendor_radio_prop:s0
+ro.vendor.ril.svlte1x       u:object_r:vendor_radio_prop:s0
+ro.vendor.ril.svdo          u:object_r:vendor_radio_prop:s0
