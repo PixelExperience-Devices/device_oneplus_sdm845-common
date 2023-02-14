@@ -172,6 +172,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     bootctl
 
+# Boost Framework
+PRODUCT_PACKAGES += \
+    BoostFrameworkOverlay
+
 # Camera
 PRODUCT_PACKAGES += \
     Aperture \

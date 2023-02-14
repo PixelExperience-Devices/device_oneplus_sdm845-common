@@ -1,0 +1,6 @@
+<resources>
+
+<!-- Boost Framework -->
+    <bool name="config_supportsBoostFramework">true</bool>
+
+</resources>
