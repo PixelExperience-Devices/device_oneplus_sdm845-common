@@ -16,9 +16,9 @@
     "remote"      : "pixel-devices-blobs"
   },
   {
-    "repository": "snnbyyds/clang-9592507",
+    "repository": "snnbyyds/clang-r487747",
     "target_path": "prebuilts/clang/host/linux-x86/clang-r487747",
-    "branch": "main",
+    "branch": "master",
     "remote": "gitlab"
   }
 ]
