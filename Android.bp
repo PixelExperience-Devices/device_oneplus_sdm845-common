@@ -5,5 +5,10 @@
 //
 
 soong_namespace {
-    imports: ["hardware/oneplus", "hardware/qcom/bootctrl"],
+    imports: [
+        "hardware/google/interfaces",
+        "hardware/google/pixel",
+        "hardware/oneplus",
+        "hardware/qcom/bootctrl"
+    ],
 }
