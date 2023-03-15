@@ -114,7 +114,7 @@ ro.bluetooth.a2dp_offload.supported=true
 persist.vendor.camera.privapp.list=com.oneplus.factorymode,com.oneplus.camera,com.oem.autotest,com.oneplus.healthcheck
 
 # Chipset
-ro.soc.manufacturer=Qualcomm
+ro.soc.manufacturer=QTI
 ro.soc.model=SDM845
 
 # CNSS
