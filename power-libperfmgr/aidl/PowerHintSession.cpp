@@ -265,14 +265,10 @@ ndk::ScopedAStatus PowerHintSession::close() {
     }
     // Remove the session from PowerSessionManager first to avoid racing.
     PowerSessionManager::getInstance()->removePowerSession(this);
-    setSessionUclampMin(0);
-    {
-        std::lock_guard<std::mutex> guard(mSessionLock);
-        mSessionClosed.store(true);
-    }
-    mDescriptor->is_active.store(false);
     mEarlyBoostHandler->setSessionDead();
     mStaleTimerHandler->setSessionDead();
+    setSessionUclampMin(0);
+    mDescriptor->is_active.store(false);
     updateUniveralBoostMode();
     return ndk::ScopedAStatus::ok();
 }
@@ -414,24 +410,29 @@ void PowerHintSession::setStale() {
 void PowerHintSession::wakeup() {
     std::lock_guard<std::mutex> guard(mSessionLock);
 
-    // We only wake up non-paused and stale sessions
-    if (mSessionClosed || !isActive() || !isTimeout())
+    // We only wake up non-paused session
+    if (mSessionClosed || !isActive()) {
         return;
+    }
+    // Update session's timer
+    mStaleTimerHandler->updateTimer();
+    // Skip uclamp update for stale session
+    if (!isTimeout()) {
+        return;
+    }
     if (ATRACE_ENABLED()) {
         std::string tag = StringPrintf("wakeup.%s(a:%d,s:%d)", getIdString().c_str(), isActive(),
                                        isTimeout());
         ATRACE_NAME(tag.c_str());
     }
     std::shared_ptr<AdpfConfig> adpfConfig = HintManager::GetInstance()->GetAdpfProfile();
-    int min = std::max(mDescriptor->current_min, static_cast<int>(adpfConfig->mUclampMinInit));
-    mDescriptor->current_min = min;
-    PowerSessionManager::getInstance()->setUclampMinLocked(this, min);
-    mStaleTimerHandler->updateTimer();
+    mDescriptor->current_min =
+            std::max(mDescriptor->current_min, static_cast<int>(adpfConfig->mUclampMinInit));
 
     if (ATRACE_ENABLED()) {
         const std::string idstr = getIdString();
         std::string sz = StringPrintf("adpf.%s-min", idstr.c_str());
-        ATRACE_INT(sz.c_str(), min);
+        ATRACE_INT(sz.c_str(), mDescriptor->current_min);
     }
 }
 
@@ -500,6 +501,7 @@ void PowerHintSession::StaleTimerHandler::updateTimer(time_point<steady_clock> s
 }
 
 void PowerHintSession::StaleTimerHandler::handleMessage(const Message &) {
+    std::lock_guard<std::mutex> guard(mClosedLock);
     if (mIsSessionDead) {
         return;
     }
@@ -529,7 +531,7 @@ void PowerHintSession::StaleTimerHandler::handleMessage(const Message &) {
 }
 
 void PowerHintSession::StaleTimerHandler::setSessionDead() {
-    std::lock_guard<std::mutex> guard(mStaleLock);
+    std::lock_guard<std::mutex> guard(mClosedLock);
     mIsSessionDead = true;
     PowerHintMonitor::getInstance()->getLooper()->removeMessages(mSession->mStaleTimerHandler);
 }
