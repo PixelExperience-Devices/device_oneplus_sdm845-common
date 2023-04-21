@@ -850,7 +850,7 @@ function configure_zram_parameters() {
             echo 1 > /sys/block/zram0/use_dedup
         fi
         #echo "$zRamSizeMB""$diskSizeUnit" > /sys/block/zram0/disksize
-        echo 4002299904 > /sys/block/zram0/disksize
+        echo 3001724928 > /sys/block/zram0/disksize
 
         # ZRAM may use more memory than it saves if SLAB_STORE_USER
         # debug option is enabled.
