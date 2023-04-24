@@ -1,0 +1,39 @@
+<!--
+  ~ Copyright (C) 2022 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!--suppress CheckTagEmptyBody: overlayable resource to use as configuration hook -->
+    <string name="config_captive_portal_http_url" translatable="false">http://cp.cloudflare.com/</string>
+    <!--suppress CheckTagEmptyBody: overlayable resource to use as configuration hook -->
+    <string name="config_captive_portal_https_url" translatable="false">https://cp.cloudflare.com/</string>
+
+    <string-array name="config_captive_portal_http_urls" translatable="false">
+        <item>http://cp.cloudflare.com/</item>
+        <item>http://connect.rom.miui.com/generate_204</item>
+        <item>http://connectivitycheck.platform.hicloud.com/generate_204</item>
+        <item>http://wifi.vivo.com.cn/generate_204</item>
+        <item>http://www.google-analytics.com/generate_204</item>
+    </string-array>
+    <string-array name="config_captive_portal_https_urls" translatable="false">
+        <item>https://cp.cloudflare.com/</item>
+        <item>https://connect.rom.miui.com/generate_204</item>
+        <item>https://connectivitycheck.platform.hicloud.com/generate_204</item>
+        <item>https://wifi.vivo.com.cn/generate_204</item>
+        <item>https://www.google-analytics.com/generate_204</item>
+    </string-array>
+</resources>
+
+
