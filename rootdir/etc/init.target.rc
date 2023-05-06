@@ -143,17 +143,15 @@ on property:vendor.usb.controller=*
    chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display@18/dynamic_dsi_clock
    chown radio radio /sys/devices/platform/soc/soc:qcom,dsi-display@18/dynamic_dsi_clock
 
+   chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display@21/dynamic_dsi_clock
+   chown radio radio /sys/devices/platform/soc/soc:qcom,dsi-display@21/dynamic_dsi_clock
+
    chmod 0660 /sys/class/drm/card0-DSI-1/aod_disable
    chown system system /sys/class/drm/card0-DSI-1/aod_disable
 
-   chmod 0666 /sys/class/drm/card0-DSI-1/SRGB
-   chmod 0666 /sys/class/drm/card0-DSI-1/DCI_P3
    chmod 0666 /sys/class/drm/card0-DSI-1/hbm
    chmod 0666 /sys/class/drm/card0-DSI-1/aod
-   chmod 0666 /sys/class/drm/card0-DSI-1/night_mode
    chmod 0666 /sys/class/drm/card0-DSI-1/panel_serial_number
-   chmod 0666 /sys/class/drm/card0-DSI-1/oneplus_mode
-   chmod 0666 /sys/class/drm/card0-DSI-1/adaption_mode
    chmod 0666 /sys/class/drm/card0-DSI-1/dynamic_dsitiming
    chmod 0666 /sys/class/drm/card0-DSI-1/notify_fppress
    chmod 0666 /sys/class/drm/card0-DSI-1/dim_alpha
@@ -432,16 +430,6 @@ service vendor.contexthub-hal-1-0 /vendor/bin/hw/android.hardware.contexthub@1.0
     disabled
 
 #ifdef VENDOR_EDIT
-on property:sys.srgb=1
-   write /sys/class/drm/card0-DSI-1/SRGB 1
-on property:sys.srgb=0
-   write /sys/class/drm/card0-DSI-1/SRGB 0
-
-on property:sys.dci3p=1
-   write /sys/class/drm/card0-DSI-1/DCI_P3 1
-on property:sys.dci3p=0
-   write /sys/class/drm/card0-DSI-1/DCI_P3 0
-
 on property:sys.hbm=5
    write /sys/class/drm/card0-DSI-1/hbm 5
 on property:sys.hbm=4
@@ -465,20 +453,6 @@ on property:sys.aod=1
    write /sys/class/drm/card0-DSI-1/aod 1
 on property:sys.aod=0
    write /sys/class/drm/card0-DSI-1/aod 0
-
-on property:sys.night_mode=1
-   write /sys/class/drm/card0-DSI-1/night_mode 1
-on property:sys.night_mode=0
-   write /sys/class/drm/card0-DSI-1/night_mode 0
-on property:sys.default_mode=1
-   write /sys/class/drm/card0-DSI-1/oneplus_mode 1
-on property:sys.default_mode=0
-   write /sys/class/drm/card0-DSI-1/oneplus_mode 0
-on property:sys.automode=1
-   write /sys/class/drm/card0-DSI-1/adaption_mode 1
-on property:sys.automode=0
-   write /sys/class/drm/card0-DSI-1/adaption_mode 0
-
 
 on property:sys.aod.disable=1
    write /sys/class/drm/card0-DSI-1/aod_disable 1
