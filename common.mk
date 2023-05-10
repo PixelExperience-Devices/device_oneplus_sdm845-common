@@ -433,10 +433,6 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@2.0-service.multihal \
     libsensorndkbridge
 
-# Statically linked GNU parted
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/parted/parted:$(TARGET_COPY_OUT_SYSTEM)/bin/parted
-
 # Touch
 PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.oneplus
