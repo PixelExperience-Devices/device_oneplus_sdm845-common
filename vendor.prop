@@ -239,3 +239,6 @@ zygote.critical_window.minute=10
 
 # Seamless transfer
 sys.fflag.override.settings_seamless_transfer=true
+
+# Rendering
+ro.hwui.render_ahead=20
