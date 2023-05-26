@@ -837,10 +837,9 @@ function configure_zram_parameters() {
         let zRamSizeMB=4096
     fi
 
-    #if [ "$low_ram" == "true" ]; then
-        #echo lz4 > /sys/block/zram0/comp_algorithm
-    #fi
-    echo zstd > /sys/block/zram0/comp_algorithm
+    if [ "$low_ram" == "true" ]; then
+        echo lz4 > /sys/block/zram0/comp_algorithm
+    fi
 
     # set max_comp_streams to 8
     echo 8 > /sys/block/zram0/max_comp_streams
@@ -849,8 +848,7 @@ function configure_zram_parameters() {
         if [ -f /sys/block/zram0/use_dedup ]; then
             echo 1 > /sys/block/zram0/use_dedup
         fi
-        #echo "$zRamSizeMB""$diskSizeUnit" > /sys/block/zram0/disksize
-        echo 3001724928 > /sys/block/zram0/disksize
+        echo "$zRamSizeMB""$diskSizeUnit" > /sys/block/zram0/disksize
 
         # ZRAM may use more memory than it saves if SLAB_STORE_USER
         # debug option is enabled.
@@ -860,8 +858,6 @@ function configure_zram_parameters() {
         if [ -e /sys/kernel/slab/zspage ]; then
             echo 0 > /sys/kernel/slab/zspage/store_user
         fi
-
-        echo 0 > /proc/sys/vm/page-cluster
 
         mkswap /dev/block/zram0
         swapon /dev/block/zram0 -p 32758
@@ -5089,9 +5085,6 @@ case "$target" in
         echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
 	echo 100 > /proc/sys/vm/swappiness
 	echo 120 > /proc/sys/vm/watermark_scale_factor
-
-        # Enable zram
-        configure_zram_parameters
     ;;
 esac
 
