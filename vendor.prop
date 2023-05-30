@@ -117,6 +117,9 @@ persist.vendor.camera.privapp.list=com.oneplus.factorymode,com.oneplus.camera,co
 ro.soc.manufacturer=Qualcomm
 ro.soc.model=SDM845
 
+# CNSS
+persist.vendor.cnss-daemon.kmsg_logging=0
+
 # Display
 debug.sf.disable_client_composition_cache=1
 persist.demo.hdmirotationlock=false
