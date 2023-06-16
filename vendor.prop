@@ -157,9 +157,6 @@ persist.vendor.ims.disableQXDMLogs=1
 # Keystore
 ro.hardware.keystore_desede=true
 
-# LMKD
-ro.lmk.log_stats=true
-
 # Logs
 persist.log.tag.AnalyticsService=S
 persist.log.tag.KernelCpuUidActiveTimeReader=S

@@ -123,9 +123,6 @@ SOONG_CONFIG_livedisplay += enabled
 SOONG_CONFIG_livedisplay_enabled := true
 endif
 
-# LMKD
-TARGET_LMKD_STATS_LOG := true
-
 # Partitions
 BOARD_SUPER_PARTITION_BLOCK_DEVICES := odm system vendor
 BOARD_SUPER_PARTITION_ODM_DEVICE_SIZE := 104857600
