@@ -4,6 +4,8 @@ on fs
 
 on init
     setprop sys.usb.configfs 1
+    write /sys/devices/platform/soc/1d84000.ufshc/clkgate_enable 0
+    write /sys/devices/platform/soc/1d84000.ufshc/hibern8_on_idle_enable 0
 
 on property:init.svc.fastbootd=running
     rm /dev/block/bootdevice/by-name/boot_aging
