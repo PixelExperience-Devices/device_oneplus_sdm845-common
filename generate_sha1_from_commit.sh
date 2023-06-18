@@ -27,7 +27,7 @@ set -e
 
 MY_DIR="${PWD}"
 
-VENDOR_DIR="${MY_DIR}"/../../../vendor/xiaomi
+VENDOR_DIR="${MY_DIR}"/../../../vendor/oneplus
 DEVICE=sdm845-common
 DIR_PREFIX="proprietary/"
 
