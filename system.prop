@@ -48,10 +48,6 @@ ro.vendor.qti.va_aosp.support=1
 
 # Radio
 persist.netmon.linger=5000
-persist.vendor.data.mode=concurrent
-ro.vendor.use_data_netmgrd=true
-ro.telephony.default_network=33,33
-telephony.lteOnCdmaDevice=1
 
 # RCS
 persist.rcs.supported=0
