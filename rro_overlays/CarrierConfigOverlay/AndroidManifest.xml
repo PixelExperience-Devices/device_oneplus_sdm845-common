@@ -19,5 +19,5 @@
     <overlay
       android:targetPackage="com.android.carrierconfig"
       android:isStatic="true"
-      android:priority="0"/>
+      android:priority="700"/>
 </manifest>
