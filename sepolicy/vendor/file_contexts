@@ -12,7 +12,7 @@
 /dev/block/platform/soc/1d84000\.ufshc/by-name/minidump                u:object_r:rawdump_block_device:s0
 /dev/block/platform/soc/1d84000\.ufshc/by-name/oem_dycnvbk             u:object_r:modem_efs_partition_device:s0
 /dev/block/platform/soc/1d84000\.ufshc/by-name/oem_stanvbk             u:object_r:modem_efs_partition_device:s0
-/dev/block/platform/soc/1d84000.ufshc/by-name/odm_[ab]                 u:object_r:system_block_device:s0
+/dev/block/platform/soc/1d84000\.ufshc/by-name/odm_[ab]                u:object_r:system_block_device:s0
 /dev/block/platform/soc/1d84000\.ufshc/by-name/op1                     u:object_r:op1_block_device:s0
 /dev/block/platform/soc/1d84000\.ufshc/by-name/op2                     u:object_r:op2_block_device:s0
 /dev/block/platform/soc/1d84000\.ufshc/by-name/param                   u:object_r:param_block_device:s0
