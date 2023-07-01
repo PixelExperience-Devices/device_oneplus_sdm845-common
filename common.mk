@@ -373,10 +373,25 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     oneplus-fwk
 
+# Perf
+PRODUCT_PACKAGES += \
+    libpsi.vendor \
+    libtflite \
+    libstdc++.vendor \
+    libvndfwk_detect_jni.qti.vendor
+
+PRODUCT_BOOT_JARS += \
+    QPerformance \
+    UxPerformance
+
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/perf-legacy/configs/common,$(TARGET_COPY_OUT_VENDOR)/etc) \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/perf-legacy/configs/sdm845,$(TARGET_COPY_OUT_VENDOR)/etc)
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
-    vendor.qti.hardware.perf@2.2.vendor
+    android.hardware.power@1.2.vendor
 
 # QMI
 PRODUCT_PACKAGES += \
@@ -400,11 +415,21 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-qti.xml
 
+# Servicetracker
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.servicetracker@1.0.vendor \
+    vendor.qti.hardware.servicetracker@1.2.vendor
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/oneplus \
     vendor/qcom/opensource/usb/etc
+
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0 \
+    android.hardware.thermal@2.0.vendor
 
 # Telephony
 PRODUCT_PACKAGES += \

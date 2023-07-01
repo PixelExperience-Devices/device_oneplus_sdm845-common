@@ -1,3 +1,16 @@
+r_dir_file(hal_perf_default, system_server)
+
+allow hal_perf_default hal_audio_default:dir r_dir_perms;
+allow hal_perf_default hal_audio_default:file r_file_perms;
+allow hal_perf_default hal_fingerprint_default:dir r_dir_perms;
+allow hal_perf_default hal_fingerprint_default:file r_file_perms;
+allow hal_perf_default hal_camera_default:dir r_dir_perms;
+allow hal_perf_default hal_camera_default:file { read open };
+allow hal_perf_default hal_graphics_composer_default:dir r_dir_perms;
+allow hal_perf_default hal_graphics_composer_default:file r_file_perms;
 allow hal_perf_default proc_meminfo:file r_file_perms;
+allow hal_perf_default self:capability kill;
 allow hal_perf_default self:capability { setuid };
 allow hal_perf_default sysfs_kgsl_proc:dir { search };
+allow hal_perf_default system_server:dir { search };
+allow hal_perf_default {appdomain}:process sigkill;

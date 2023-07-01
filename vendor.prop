@@ -185,10 +185,13 @@ persist.sys.oem.otg_support=true
 
 # PASR
 vendor.pasr.activemode.enabled=true
-vendor.power.pasr.enabled=false
+vendor.power.pasr.enabled=true
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
+ro.vendor.perf-hal.ver=2.2
+ro.vendor.perf.scroll_opt=true
+ro.vendor.qspm.enable=true
 
 # Radio
 persist.radio.multisim.config=dsds

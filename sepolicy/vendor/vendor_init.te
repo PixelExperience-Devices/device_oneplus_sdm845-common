@@ -1,5 +1,7 @@
 allow vendor_init tmpfs:chr_file { read open };
 allow vendor_init tmpfs:dir { create_dir_perms mounton };
+allow vendor_init proc_dirty:file { write };
+allow vendor_init cgroup:file { getattr };
 
 allow vendor_init op2_file:file create_file_perms;
 

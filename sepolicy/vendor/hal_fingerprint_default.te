@@ -1,0 +1,3 @@
+# Perf Sepolicy
+allow hal_fingerprint_default hal_perf_default:binder call;
+allow hal_fingerprint_default hal_perf_hwservice:hwservice_manager find;
