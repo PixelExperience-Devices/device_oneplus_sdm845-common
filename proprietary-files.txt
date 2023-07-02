@@ -747,6 +747,9 @@ vendor/bin/pm-service
 vendor/lib64/libperipheral_client.so
 vendor/lib64/libspcom.so
 
+# Perf
+vendor/etc/powerhint.xml
+
 # Perf - LA.QSSI.13.0.r1-10000.02-qssi.0
 system/etc/permissions/com.qualcomm.qti.Performance.xml|7976f2fd46b8d07814310cc957a70f829bdd6932
 system/etc/permissions/com.qualcomm.qti.UxPerformance.xml|d92749d80c5d956db8251b08ea6388d3f107a32c
@@ -832,7 +835,6 @@ vendor/etc/pwr/VideoPowerOptFeature.xml|0f80c2f1dc7603e70c7e9fcd0f20696955d6f4a5
 vendor/etc/seccomp_policy/qspm.policy|943dd12bd4ae7cb0037b2e246143d76bb1787257
 vendor/etc/vintf/manifest/vendor.qti.hardware.servicetracker@1.2-service.xml|40b6abd9b4be99dc5722eb60d71ee36764bf4ef3
 vendor/etc/vintf/manifest/vendor.qti.memory.pasrmanager@1.0-service.xml|7df963e6444be110b2b3896847dd57fd8558996f
-vendor/etc/powerhint.xml|604718bb130c9f8a0b8b3933a734a2896e18e0e7
 vendor/lib/hw/vendor.qti.hardware.servicetracker@1.2-impl.so|f3b04684d1d8a6b5ed7bffd791567cd5747c6aad
 vendor/lib/hw/vendor.qti.memory.pasrmanager@1.0-impl.so|c694ca94dc304e4ccdaa7911fda0b5f61acd0f14
 vendor/lib/libpasrutils.so|9cdcbbc014a57825af549fa3ea4bd51a05bbfcbe
