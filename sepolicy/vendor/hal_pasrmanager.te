@@ -1,0 +1,24 @@
+# Define Domain for PASR HAL
+type hal_pasrmanager_memory_qti, domain;
+type hal_pasrmanager_memory_qti_exec, exec_type, vendor_file_type, file_type;
+
+# Allow permissions required for this HAL server to offer a
+# HAL implementation of the specified type over HwBinder
+hal_server_domain(hal_pasrmanager_memory_qti, hal_pasrmanager_memory)
+
+# Started by init
+init_daemon_domain(hal_pasrmanager_memory_qti)
+
+# Allow PASR clients to perform binder IPC to PASR HAL server
+binder_call(hal_pasrmanager_memory_client, hal_pasrmanager_memory_server)
+
+# Add pasrmanager to hwservice_manager and allow it to be discovered
+hal_attribute_hwservice(hal_pasrmanager_memory, hal_pasrmanager_memory_hwservice)
+
+# For reading "vendor.pasr." properties
+get_prop(hal_pasrmanager_memory_qti, vendor_pasr_prop)
+
+allow hal_pasrmanager_memory_qti sysfs:dir { read };
+
+allow hal_pasrmanager_memory_qti default_android_hwservice:hwservice_manager { add find };
+allow hal_pasrmanager_memory_qti hal_pasrmanager_memory_hwservice:hwservice_manager { add find };

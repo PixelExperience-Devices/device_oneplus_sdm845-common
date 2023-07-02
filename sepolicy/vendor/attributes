@@ -14,3 +14,7 @@ attribute hal_ifaa_server;
 attribute hal_param;
 attribute hal_param_client;
 attribute hal_param_server;
+
+attribute hal_pasrmanager_memory;
+attribute hal_pasrmanager_memory_client;
+attribute hal_pasrmanager_memory_server;
