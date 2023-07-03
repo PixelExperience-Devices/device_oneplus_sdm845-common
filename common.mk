@@ -420,15 +420,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    persist.vendor.ims.disableADBLogs=1 \
-    persist.vendor.ims.disableDebugLogs=1 \
-    persist.vendor.ims.disableIMSLogs=1 \
-    persist.vendor.ims.disableQXDMLogs=1 \
-    persist.vendor.ims.loglevel=0 \
-    persist.vendor.ims.rtp.enableqxdm=0 \
-    persist.vendor.ims.vt.enableadb=0
-
 # Call recording for Google Dialer
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/com.google.android.apps.dialer.call_recording_audio.features.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.android.apps.dialer.call_recording_audio.features.xml
