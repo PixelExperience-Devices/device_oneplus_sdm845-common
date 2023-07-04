@@ -2,5 +2,6 @@ allow vendor_init tmpfs:chr_file { read open };
 allow vendor_init tmpfs:dir { create_dir_perms mounton };
 
 allow vendor_init op2_file:file create_file_perms;
+allow vendor_init proc_sched_boost:file write;
 
 set_prop(vendor_init, freq_prop)
