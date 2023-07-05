@@ -74,6 +74,10 @@ on init
     # Mount cgroup mount point for cpu accounting
     mount cgroup none /acct cpuacct
 
+    # Set boottime stune value
+    write /dev/stune/schedtune.prefer_idle 1
+    write /dev/stune/schedtune.boost 100
+
     # set default schedTune value for foreground/top-app
     write /dev/stune/foreground/schedtune.prefer_idle 1
     write /dev/stune/top-app/schedtune.boost 10
@@ -454,6 +458,9 @@ on property:sys.boot_completed=1
     write /dev/blkio/background/blkio.weight 200
     write /dev/blkio/blkio.group_idle 2000
     write /dev/blkio/background/blkio.group_idle 0
+    #Set runtime stune value
+    write /dev/stune/schedtune.prefer_idle 0
+    write /dev/stune/schedtune.boost 0
     #Enable idle state listener
     write /sys/class/drm/card0/device/idle_encoder_mask 1
     write /sys/class/drm/card0/device/idle_timeout_ms 100
