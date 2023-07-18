@@ -209,6 +209,9 @@ PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
 USE_DEX2OAT_DEBUG := false
 WITH_DEXPREOPT_DEBUG_INFO := false
 
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    SettingsGoogle
+
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     dalvik.vm.boot-dex2oat-cpu-set=1,2,3,4,5,6,7 \
     dalvik.vm.boot-dex2oat-threads=7 \
