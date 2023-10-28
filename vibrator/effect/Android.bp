@@ -1,5 +1,5 @@
 Common_CFlags = ["-Wall"]
-Common_CFlags += ["-Wno-error"]
+Common_CFlags += ["-Werror"]
 
 cc_library_shared {
     name: "libqtivibratoreffect.oneplus_sdm845",
